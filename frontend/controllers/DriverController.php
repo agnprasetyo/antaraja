@@ -3,8 +3,8 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\UploadFiles;
 use common\models\Driver;
+use common\models\UploadFiles;
 use frontend\models\DriverSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -125,6 +125,38 @@ class DriverController extends Controller
     /**
      *
      */
+    // public function actionFiles($id)
+    // {
+    //     if (($model = UploadFiles::findOne($id)) !== null) {
+    //         if ($model->status == $model::BERKAS_DELETED) {
+    //
+    //             throw new NotFoundHttpException('The requested page does not exist.');
+    //         }
+    //     }
+    //
+    //     if ($model->load(Yii::$app->request->post())) {
+    //         $files = UploadedFile::getInstances($model, 'files');
+    //
+    //         if ($model->save(false)) {
+    //             if (is_file(Yii::getAlias($model::DIR_FILES) . '/' . $model->files)) {
+    //                 @unlink(Yii::getAlias($model::DIR_FILES) . '/' . $model->files);
+    //             }
+    //             $files[0]->saveAs(Yii::getAlias($model::DIR_FILES) . '/' . $model->files);
+    //
+    //             Yii::$app->session->setFlash('success', 'Berhasil mengunggah berkas verifikasi pendaftar <strong>' . $model->nama . '</strong>.');
+    //
+    //             return $this->redirect(['view-files', 'id' => $id]);
+    //         }
+    //     }
+    //
+    //     return $this->render('files', [
+    //         'model' => $model,
+    //     ]);
+    // }
+
+    /**
+     *
+     */
     public function actionFiles($id)
     {
         if (($model = UploadFiles::findOne($id)) !== null) {
@@ -137,43 +169,29 @@ class DriverController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             $files = UploadedFile::getInstances($model, 'files');
 
-            if ($model->save(false)) {
-                if (is_file(Yii::getAlias($model::DIR_FILES) . '/' . $model->files)) {
-                    @unlink(Yii::getAlias($model::DIR_FILES) . '/' . $model->files);
-                }
-                $files[0]->saveAs(Yii::getAlias($model::DIR_FILES) . '/' . $model->files);
+            $model->files = $files->name;
 
-                Yii::$app->session->setFlash('success', 'Berhasil mengunggah berkas verifikasi pendaftar <strong>' . $model->nama . '</strong>.');
+            $modal->save();
 
-                return $this->redirect(['view-files', 'id' => $id]);
-            }
+            $files->saveAs(Yii::$app->basePath . '/web/upload' . $files->name);
+              return $this->redirect(['index']);
         }
+
+            // if ($model->save(false)) {
+            //     if (is_file(Yii::getAlias($model::DIR_FILES) . '/' . $model->files)) {
+            //         @unlink(Yii::getAlias($model::DIR_FILES) . '/' . $model->files);
+            //     }
+            //     $files[0]->saveAs(Yii::getAlias($model::DIR_FILES) . '/' . $model->files);
+            //
+            //     Yii::$app->session->setFlash('success', 'Berhasil mengunggah berkas verifikasi pendaftar <strong>' . $model->nama . '</strong>.');
+            //
+            //     return $this->redirect(['view-files', 'id' => $id]);
+            // }
 
         return $this->render('files', [
             'model' => $model,
         ]);
     }
-
-    // /**
-    //  *
-    //  */
-    // public function actionFiles($id)
-    // {
-    //       $model = new UploadFiles();
-    //
-    //       //Set the path that the file will be uploaded to
-    //       $path = Yii::getAlias('@frontend') .'/web/upload/'
-    //
-    //       if (Yii::$app->request->isPost) {
-    //           $model->file = UploadedFile::getInstance($model, 'file');
-    //
-    //           if ($model->file && $model->validate()) {
-    //               $model->file->saveAs($path . $model->file->baseName . '.' . $model->file->extension);
-    //           }
-    //       }
-    //
-    //       return $this->renderPartial('index', ['model' => $model]);
-    // }
 
     /**
      *

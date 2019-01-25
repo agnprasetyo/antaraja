@@ -19,8 +19,6 @@ use kartik\file\FileInput;
 
     <?= $form->field($model, 'files')->widget(FileInput::classname())->label('Berkas (.pdf)') ?>
 
-    <?php // $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']) ?>
-
     <?php // $form->field($model, 'file')->fileInput(); ?>
 
     <div class="form-group">
