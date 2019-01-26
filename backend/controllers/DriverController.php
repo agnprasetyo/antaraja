@@ -119,14 +119,13 @@ class DriverController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        // $this->findModel($id)->delete();
 
-        // $model = $this->findModel($id)->delete();
-        // $model = $this->findModel($id);
-        // $model->status = $model::BERKAS_DELETED;
-        // $model->save(false);
+        $model = $this->findModel($id);
+        $model->berkas = $model::BERKAS_DELETED;
+        $model->save(false);
 
-        // Yii::$app->session->setFlash('success', 'Berhasil menghapus pendaftar <strong>' . $model->nama . '</strong>.');
+        Yii::$app->session->setFlash('success', 'Berhasil menghapus pendaftar <strong>' . $model->nama . '</strong>.');
 
         return $this->redirect(['index']);
     }
@@ -178,6 +177,29 @@ class DriverController extends Controller
      */
     public function actionFiles($id)
     {
+        // if (($model = UploadFiles::findOne($id)) !== null) {
+        //     if ($model->status == $model::BERKAS_DELETED) {
+        //
+        //         throw new NotFoundHttpException('The requested page does not exist.');
+        //     }
+        // }
+        //
+        // if ($model->load(Yii::$app->request->post())) {
+        //     $model->data = UploadedFile::getInstance($model, 'data');
+        //     if ($model->upload()) {
+        //         // file is uploaded successfully
+        //         return;
+        //     }
+        // }
+
+
+
+
+
+
+
+
+
         if (($model = UploadFiles::findOne($id)) !== null) {
             if ($model->status == $model::BERKAS_DELETED) {
 
@@ -208,20 +230,21 @@ class DriverController extends Controller
     /**
      *
      */
-    public function actionViewFiles($id)
-    {
-        $model = $this->findModel($id);
-
-        return $this->render('view-files', [
-            'model' => $model,
-        ]);
-    }
+    // public function actionViewFiles($id)
+    // {
+    //     $model = $this->findModel($id);
+    //
+    //     return $this->render('view-files', [
+    //         'model' => $model,
+    //     ]);
+    // }
 
     /**
      *
      */
     public function actionDeleteFiles($id)
     {
+        // $this->findModel($id)->delete();
         $model = $this->findModel($id);
 
         if (is_files(Yii::getAlias($model::DIR_FILES) . '/' . $model->files)) {

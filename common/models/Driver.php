@@ -23,7 +23,6 @@ use Yii;
  * @property string $merk_motor
  * @property string $pekerjaan
  * @property string $nopol_kendaraan
- * @property string $files
  * @property string $ojol
  * @property string $berkas
  *
@@ -52,18 +51,15 @@ class Driver extends \yii\db\ActiveRecord
     const BERKAS_DITOLAK  = 'Ditolak';
     const BERKAS_DELETED  = 'Dihapus';
 
-    // const DIR_FILES = '@webroot/uploads/files';
+    const DIR_FILES = '@webroot/uploads';
     // const URL_FILES = '/uploads/files';
-
-    public $files;
-
 
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'driver';
+        return '{{%driver}}';
     }
 
     /**
@@ -81,7 +77,7 @@ class Driver extends \yii\db\ActiveRecord
             [['alamat_tinggal', 'alamat_ktp'], 'string', 'max' => 30],
             [['nopol_kendaraan'], 'string', 'max' => 10],
             [['files'], 'string', 'max' => 50],
-            [['files'], 'file', 'skipOnEmpty' => false, 'extensions' => 'pdf'],
+            // [['data'], 'file', 'skipOnEmpty' => false, 'extensions' => 'pdf'],
         ];
     }
 
@@ -107,7 +103,6 @@ class Driver extends \yii\db\ActiveRecord
             'merk_motor' => 'Merk Motor',
             'pekerjaan' => 'Pekerjaan',
             'nopol_kendaraan' => 'Nopol Kendaraan',
-            'files' => 'Upload File',
             'ojol' => 'Ikut Ojol',
             'berkas' => 'Berkas',
         ];
