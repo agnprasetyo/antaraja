@@ -97,13 +97,7 @@ return [
         'buttons' => [
             'berkas' => function ($url, $model) {
                 if ($model->isTerima($model->id)) {
-                    // return Html::a('<i class="fa fa-search-plus"></i>',
-                    //     ['view-berkas', 'id' => $model->id],
-                    //     [
-                    //         // 'title' => 'Lihat Berkas',
-                    //         'class' => 'btn btn-xs btn-primary',
-                    //     ]
-                    // );
+
                     return '<span class="label label-primary">Status Diterima</span>';
 
                 }

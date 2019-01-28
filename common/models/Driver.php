@@ -51,9 +51,6 @@ class Driver extends \yii\db\ActiveRecord
     const BERKAS_DITOLAK  = 'Ditolak';
     const BERKAS_DELETED  = 'Dihapus';
 
-    const DIR_FILES = '@webroot/uploads';
-    // const URL_FILES = '/uploads/files';
-
     /**
      * {@inheritdoc}
      */
@@ -76,8 +73,8 @@ class Driver extends \yii\db\ActiveRecord
             [['pendidikan', 'jenis_kelamin', 'status', 'ojol'], 'string', 'max' => 32],
             [['alamat_tinggal', 'alamat_ktp'], 'string', 'max' => 30],
             [['nopol_kendaraan'], 'string', 'max' => 10],
-            [['files'], 'string', 'max' => 50],
-            // [['data'], 'file', 'skipOnEmpty' => false, 'extensions' => 'pdf'],
+            // [['files'], 'string', 'max' => 50],
+            [['files'], 'file', 'skipOnEmpty' => false, 'extensions' => 'pdf'],
         ];
     }
 

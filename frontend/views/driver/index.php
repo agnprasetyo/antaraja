@@ -83,7 +83,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'buttons' => [
                         'files' => function ($url, $model) {
                             if ($model->hasFiles($model->id)) {
-                                return Html::a('<i class="fa fa-search-plus"></i>',
+                                return Html::a('Sudah<i class="fa fa-search-plus"></i>',
                                     ['view-files', 'id' => $model->id],
                                     [
                                         'title' => 'Lihat Berkas',
@@ -92,24 +92,24 @@ $this->params['breadcrumbs'][] = $this->title;
                                 );
                             }
                             elseif (!$model->hasFiles($model->id)) {
-                                return Html::a('<i class="fa fa-upload"></i>',
+                                return Html::a('Belum<i class="fa fa-upload"></i>',
                                     ['files', 'id' => $model->id],
                                     [
                                         'title' => 'Unggah Berkas',
-                                        'class' => 'btn btn-xs btn-warning',
+                                        'class' => 'btn btn-xs btn-danger',
                                     ]
                                 );
                             }
-                            // if ($model->isTolak($model->id)) {
-                            //
-                            //     return '<span class="label label-danger">Status Ditolak</span>';
-                            // }
-                            //
-                            // return '<span class="label label-warning">Status Pending</span>';
+                            if ($model->isTolak($model->id)) {
+
+                                return '<span class="label label-danger">Status Ditolak</span>';
+                            }
+
+                            return '<span class="label label-warning">Status Pending</span>';
                         },
                     ],
                 ],
-                ['class' => 'yii\grid\ActionColumn'],
+                // ['class' => 'yii\grid\ActionColumn'],
             ],
         ]); ?>
     </div>

@@ -70,15 +70,21 @@ class DriverController extends Controller
 
       if ($model->load(Yii::$app->request->post())) {
         $model->tanggal = date('Y-m-d');
+
+        $dataName = $model->nama;
+        $file = \yii\web\UploadedFile::getInstance($model, 'files');
+        if (!empty($file))
+            $model->files = $file;
+
         if ($model->save()) {
+            if (!empty($file))
+                $file->saveAs( Yii::getAlias('@webroot') .'/uploads/files/'.$model->id.'-'.$model->nama.'.'.$model->files->extension);
+
             Yii::$app->session->setFlash('success', 'Berhasil mendaftar sebagai driver dengan nama <strong>' . $model->nama . '</strong>.');
 
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             Yii::$app->session->setFlash('error', 'Gagal  mendaftar sebagai driver <strong>' . $model->nama . '</strong>.');
-        }
-        if ($model->save()) {
-          return $this->redirect(['view', 'id' => $model->id]);
         }
       }
 
@@ -98,8 +104,25 @@ class DriverController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())){
+            $dataName = $model->nama;
+            $file = \yii\web\UploadedFile::getInstance($model, 'files');
+            if (!empty($file)){
+                $delete = $model->oldAttributes['files'];
+                $model->files= $file;
+            }else{
+                $model->files = $model->oldAttributes['files'];
+            }
+
+            if($model->save()){
+                if (!empty($file))
+                    $file->saveAs( Yii::getAlias('@webroot') .'/uploads/files/'.$model->id.'-'.$model->nama.'.'.$model->files->extension);
+
+                Yii::$app->session->setFlash('success', 'Berhasil mengupdate data driver dengan nama <strong>' . $model->nama . '</strong>.');
+
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+            Yii::$app->session->setFlash('error', 'Gagal  mendaftar sebagai driver <strong>' . $model->nama . '</strong>.');
         }
 
         return $this->render('update', [
@@ -116,113 +139,23 @@ class DriverController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        if(file_exists(Yii::getAlias('@webroot').'/uploads/files/'.$model->id.'-'.$model->nama.'.'.$model->files))
+        unlink(Yii::getAlias('@webroot').'/uploads/files/'.$model->id.'-'.$model->nama.'.'.$model->files);
+        $model->delete();
 
         return $this->redirect(['index']);
     }
 
-
-    /**
-     *
-     */
-    // public function actionFiles($id)
+    // /**
+    //  *
+    //  */
+    // public function hasFiles($id)
     // {
-    //     if (($model = UploadFiles::findOne($id)) !== null) {
-    //         if ($model->status == $model::BERKAS_DELETED) {
+    //     $model = static::findOne($id);
     //
-    //             throw new NotFoundHttpException('The requested page does not exist.');
-    //         }
-    //     }
-    //
-    //     if ($model->load(Yii::$app->request->post())) {
-    //         $files = UploadedFile::getInstances($model, 'files');
-    //
-    //         if ($model->save(false)) {
-    //             if (is_file(Yii::getAlias($model::DIR_FILES) . '/' . $model->files)) {
-    //                 @unlink(Yii::getAlias($model::DIR_FILES) . '/' . $model->files);
-    //             }
-    //             $files[0]->saveAs(Yii::getAlias($model::DIR_FILES) . '/' . $model->files);
-    //
-    //             Yii::$app->session->setFlash('success', 'Berhasil mengunggah berkas verifikasi pendaftar <strong>' . $model->nama . '</strong>.');
-    //
-    //             return $this->redirect(['view-files', 'id' => $id]);
-    //         }
-    //     }
-    //
-    //     return $this->render('files', [
-    //         'model' => $model,
-    //     ]);
+    //     return $model ? (bool) $model->files : false;
     // }
-
-    /**
-     *
-     */
-    public function actionFiles($id)
-    {
-        if (($model = UploadFiles::findOne($id)) !== null) {
-            if ($model->status == $model::BERKAS_DELETED) {
-
-                throw new NotFoundHttpException('The requested page does not exist.');
-            }
-        }
-
-        if ($model->load(Yii::$app->request->post())) {
-            $files = UploadedFile::getInstances($model, 'files');
-
-            $model->files = $files->name;
-
-            $modal->save();
-
-            $files->saveAs(Yii::$app->basePath . '/web/upload' . $files->name);
-              return $this->redirect(['index']);
-        }
-
-            // if ($model->save(false)) {
-            //     if (is_file(Yii::getAlias($model::DIR_FILES) . '/' . $model->files)) {
-            //         @unlink(Yii::getAlias($model::DIR_FILES) . '/' . $model->files);
-            //     }
-            //     $files[0]->saveAs(Yii::getAlias($model::DIR_FILES) . '/' . $model->files);
-            //
-            //     Yii::$app->session->setFlash('success', 'Berhasil mengunggah berkas verifikasi pendaftar <strong>' . $model->nama . '</strong>.');
-            //
-            //     return $this->redirect(['view-files', 'id' => $id]);
-            // }
-
-        return $this->render('files', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     *
-     */
-    public function actionViewFiles($id)
-    {
-        $model = $this->findModel($id);
-
-        return $this->render('view-files', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     *
-     */
-    public function actionDeleteFiles($id)
-    {
-        $model = $this->findModel($id);
-
-        if (is_files(Yii::getAlias($model::DIR_FILES) . '/' . $model->files)) {
-            @unlink(Yii::getAlias($model::DIR_FILES) . '/' . $model->files);
-        }
-
-        $model->berkas = null;
-        $model->save(false);
-
-        Yii::$app->session->setFlash('error', 'Berhasil menghapus berkas verifikasi pendaftar <strong>' . $model->nama . '</strong>.');
-
-        return $this->redirect(['view', 'id' => $model->nama]);
-    }
 
     /**
      * Finds the Driver model based on its primary key value.

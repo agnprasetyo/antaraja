@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model common\models\Driver */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Drivers', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Data Driver', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>

@@ -57,7 +57,7 @@ use kartik\file\FileInput;
 
       <?= $form->field($model, 'nopol_kendaraan')->textInput(['maxlength' => true]) ?>
 
-      <?php // $form->field($model, 'upload_file')->widget(FileInput::classname())->label('Upload Berkas') ?>
+      <?= $form->field($model, 'files')->widget(FileInput::classname())->label('Upload Berkas') ?>
 
       <?= $form->field($model, 'ojol')->widget(Select2::classname(), [
           'data' => $model->listOjol(),

@@ -80,9 +80,6 @@ class DriverController extends Controller
           } else {
               Yii::$app->session->setFlash('error', 'Gagal menambahkan pendaftar <strong>' . $model->nama . '</strong>.');
           }
-          // if ($model->save()) {
-          //   return $this->redirect(['view', 'id' => $model->id]);
-          // }
         }
 
         return $this->render('create', [
@@ -123,7 +120,7 @@ class DriverController extends Controller
 
         $model = $this->findModel($id);
         $model->berkas = $model::BERKAS_DELETED;
-        $model->save(false);
+        $model->delete();
 
         Yii::$app->session->setFlash('success', 'Berhasil menghapus pendaftar <strong>' . $model->nama . '</strong>.');
 
@@ -177,136 +174,35 @@ class DriverController extends Controller
      */
     public function actionFiles($id)
     {
-        // if (($model = UploadFiles::findOne($id)) !== null) {
-        //     if ($model->status == $model::BERKAS_DELETED) {
-        //
-        //         throw new NotFoundHttpException('The requested page does not exist.');
-        //     }
-        // }
-        //
-        // if ($model->load(Yii::$app->request->post())) {
-        //     $model->data = UploadedFile::getInstance($model, 'data');
-        //     if ($model->upload()) {
-        //         // file is uploaded successfully
-        //         return;
-        //     }
-        // }
-
-
-
-
-
-
-
-
-
-        if (($model = UploadFiles::findOne($id)) !== null) {
+        if (($model = Uploadfiles::findOne($id)) !== null) {
             if ($model->status == $model::BERKAS_DELETED) {
 
                 throw new NotFoundHttpException('The requested page does not exist.');
             }
         }
-
         if ($model->load(Yii::$app->request->post())) {
-            $files = UploadedFile::getInstances($model, 'files');
+              $dataName = $model->nama;
+              $file = \yii\web\UploadedFile::getInstance($model, 'files');
+              if (!empty($file))
+                  $model->files = $file;
 
-            if ($model->save(false)) {
-                if (is_file(Yii::getAlias($model::DIR_FILES) . '/' . $model->files)) {
-                    @unlink(Yii::getAlias($model::DIR_FILES) . '/' . $model->files);
-                }
-                $files[0]->saveAs(Yii::getAlias($model::DIR_FILES) . '/' . $model->files);
+              if($model->save())
+              {
 
-                Yii::$app->session->setFlash('success', 'Berhasil mengunggah berkas verifikasi pendaftar <strong>' . $model->nama . '</strong>.');
+                if (!empty($file))
+                  $file->saveAs( Yii::getAlias('@webroot') .'/uploads/files/'.$dataName.'.'.$model->files->extension);
 
-                return $this->redirect(['view-files', 'id' => $id]);
-            }
+                return $this->redirect(['view-files', 'id' => $model->id]);
+              }
+              return $this->render('files', ['model' => $model]);
+        } else {
+            return $this->render('files', ['model' => $model]);
         }
+        // echo "<pre>";print_r($files);exit();
 
         return $this->render('files', [
             'model' => $model,
         ]);
-    }
-
-    /**
-     *
-     */
-    // public function actionViewFiles($id)
-    // {
-    //     $model = $this->findModel($id);
-    //
-    //     return $this->render('view-files', [
-    //         'model' => $model,
-    //     ]);
-    // }
-
-    /**
-     *
-     */
-    public function actionDeleteFiles($id)
-    {
-        // $this->findModel($id)->delete();
-        $model = $this->findModel($id);
-
-        if (is_files(Yii::getAlias($model::DIR_FILES) . '/' . $model->files)) {
-            @unlink(Yii::getAlias($model::DIR_FILES) . '/' . $model->files);
-        }
-
-        $model->berkas = null;
-        $model->save(false);
-
-        Yii::$app->session->setFlash('error', 'Berhasil menghapus berkas verifikasi pendaftar <strong>' . $model->nama . '</strong>.');
-
-        return $this->redirect(['view', 'id' => $model->nama]);
-    }
-
-    /**
-     *
-     */
-    public function actionPrint($id)
-    {
-      $model = $this->findModel($id);
-
-      $content = $this->renderPartial('print', [
-        'model' => $model,
-      ]);
-
-      $pdf = new Pdf(
-          [
-              'content' => $content,
-              // 'cssFile' => '@public/assets-print/card/style.min.css',
-              'format'  => Pdf::FORMAT_A4,
-              // 'orientation' => Pdf::ORIENT_LANDSCAPE,
-              'destination' => Pdf::DEST_BROWSER,
-
-              'options' => [
-                  'title'   => 'Laporan Pendaftar',
-                  'subject' => 'Laporan Pendaftar',
-              ],
-              'methods' => [
-                  'SetHeader' => [
-                      '<div style="font-size: 6pt; border: none; text-align: center;">Format Kertas A4</div>'
-                      // $this->renderPartial('_header'),
-                  ],
-                  'SetFooter' => ['<div style="font-size: 6pt; border: none; text-align: center;">Halaman {PAGENO} dari {nbpg}</div>']
-              ],
-              'filename' => 'Laporan Pendaftar' . '.pdf',
-              // 'defaultFontSize' => 6,
-              // 'marginTop'    => 40,
-              'marginTop' => 10,
-              'marginBottom' => 4,
-              'marginRight'  => 5,
-              'marginLeft'   => 5,
-              'marginHeader' => 5,
-              'marginFooter' => 3,
-          ]
-      );
-
-      $response         = Yii::$app->response;
-      $response->format = Response::FORMAT_RAW;
-      $headers          = $response->headers;
-      $headers->add('Content-Type', 'application/pdf');
-
-      return $pdf->render();
     }
 
     /**
@@ -319,7 +215,10 @@ class DriverController extends Controller
     protected function findModel($id)
     {
         if (($model = Driver::findOne($id)) !== null) {
-            return $model;
+          if ($model->status !== $model::BERKAS_DELETED) {
+
+              return $model;
+          }
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
