@@ -32,7 +32,7 @@ AppAsset::register($this);
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar bg-info navbar-fixed-top',
         ],
     ]);
     $menuItems = [
@@ -40,10 +40,10 @@ AppAsset::register($this);
         ['label' => 'About', 'url' => ['/site/about']],
         ['label' => 'Driver', 'url' => ['/driver']],
     ];
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
+    // echo Nav::widget([
+    //     'options' => ['class' => 'navbar-nav navbar-right'],
+    //     'items' => $menuItems,
+    // ]);
     NavBar::end();
     ?>
 
@@ -56,11 +56,10 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="footer">
+<footer class="footer" style="background-color: #e3f2fd;">
     <div class="container">
-        <p class="pull-left">&copy; <?= date('Y') ?> <?= Html::a(Yii::$app->name, ['/']) ?></p>
+        <p class="pull-right">&copy; <?= date('Y') ?> <?= Html::a(Yii::$app->name, ['/']) ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>
 

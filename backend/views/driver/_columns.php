@@ -83,32 +83,35 @@ return [
         'class'=>'\kartik\grid\DataColumn',
         'attribute'=>'ojol',
     ],
-    // [
-    //     'class'=>'\kartik\grid\DataColumn',
-    //     'attribute'=>'berkas',
-    // ],
     [
-        'class' => 'yii\grid\ActionColumn',
-        'options' => [
-            'style' => 'width: 40px',
-        ],
-        'header'   => 'Berkas',
-        'template' => '{berkas}',
-        'buttons' => [
-            'berkas' => function ($url, $model) {
-                if ($model->isTerima($model->id)) {
+      'attribute' => 'status',
+      'options' => [
+          'style' => 'width: 90px',
+      ],
+      'format'    => 'raw',
+      'filter'    => $searchModel->listBerkas(),
+      'value'     => function ($model)
+      {
+        switch ($model->berkas) {
+          case $model::BERKAS_DITERIMA:
+          $berkas = '<span class="label label-success">'.$model::BERKAS_DITERIMA.'</span>';
+          break;
 
-                    return '<span class="label label-primary">Status Diterima</span>';
+          case $model::BERKAS_DITOLAK:
+          $berkas = '<span class="label label-danger">'.$model::BERKAS_DITOLAK.'</span>';
+          break;
 
-                }
-                if ($model->isTolak($model->id)) {
+          case $model::BERKAS_PENDING:
+          $berkas = '<span class="label label-warning">'.$model::BERKAS_PENDING.'</span>';
+          break;
 
-                    return '<span class="label label-danger">Status Ditolak</span>';
-                }
+          default:
+          $berkas = '<span class="label label-danger">'.$model::BERKAS_DELETED.'</span>';
+          break;
+        }
 
-                return '<span class="label label-warning">Status Pending</span>';
-            },
-        ],
+        return $berkas;
+      },
     ],
     [
         'class' => 'yii\grid\ActionColumn',

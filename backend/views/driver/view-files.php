@@ -23,12 +23,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-        <?= Html::a('Download', Yii::$app->homeUrl . $model::URL_FILES . '/' . $model->files, ['class' => 'btn btn-success', 'download' => $model->files]) ?>
+        <?php // Html::a('Download', Yii::$app->homeUrl . $model::URL_FILES . '/' . $model->files, ['class' => 'btn btn-success', 'download' => $model->files]) ?>
     </p>
 
     <div class="panel panel-default">
       <div class="panel-body">
-          <embed width="100%" height="720" type="application/pdf" src="<?php echo Yii::$app->homeUrl . $model::URL_FILES . '/' . $model->files ?>">
+          <embed width="100%" height="720" type="application/pdf" src="<?php echo 'uploads/files/'.$model->files; ?>">
       </div>
     </div>
 

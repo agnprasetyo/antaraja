@@ -74,7 +74,7 @@ class Driver extends \yii\db\ActiveRecord
             [['alamat_tinggal', 'alamat_ktp'], 'string', 'max' => 30],
             [['nopol_kendaraan'], 'string', 'max' => 10],
             // [['files'], 'string', 'max' => 50],
-            [['files'], 'file', 'skipOnEmpty' => false, 'extensions' => 'pdf'],
+            [['files'], 'file', 'extensions' => 'pdf'],
         ];
     }
 

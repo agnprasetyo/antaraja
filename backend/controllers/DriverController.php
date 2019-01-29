@@ -3,7 +3,6 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\UploadFiles;
 use common\models\Driver;
 use backend\models\DriverSearch;
 use yii\web\Controller;
@@ -174,14 +173,13 @@ class DriverController extends Controller
      */
     public function actionFiles($id)
     {
-        if (($model = Uploadfiles::findOne($id)) !== null) {
+        if (($model = Driver::findOne($id)) !== null) {
             if ($model->status == $model::BERKAS_DELETED) {
-
                 throw new NotFoundHttpException('The requested page does not exist.');
+
             }
         }
         if ($model->load(Yii::$app->request->post())) {
-              $dataName = $model->nama;
               $file = \yii\web\UploadedFile::getInstance($model, 'files');
               if (!empty($file))
                   $model->files = $file;
@@ -190,7 +188,7 @@ class DriverController extends Controller
               {
 
                 if (!empty($file))
-                  $file->saveAs( Yii::getAlias('@webroot') .'/uploads/files/'.$dataName.'.'.$model->files->extension);
+                  $file->saveAs( Yii::getAlias('@root') .'uploads/files/'. $model->nama .'-'.$model->files->extension);
 
                 return $this->redirect(['view-files', 'id' => $model->id]);
               }
@@ -203,6 +201,34 @@ class DriverController extends Controller
         return $this->render('files', [
             'model' => $model,
         ]);
+    }
+
+    /**
+     *
+     */
+    public function actionViewFiles($id)
+    {
+        $model = $this->findModel($id);
+
+        return $this->render('view-files', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     *
+     */
+    public function actionDeleteFiles($id)
+    {
+        $model = $this->findModel($id);
+        if(file_exists(Yii::getAlias('@root') . 'uploads/files/'. $model->files))
+          unlink(Yii::getAlias('@root') . 'uploads/files/'. $model->files);
+        $model->delete();
+
+        Yii::$app->session->setFlash('error', 'Berhasil menghapus berkas verifikasi pendaftar <strong>' . $model->nama . '</strong>.');
+
+        // return $this->redirect(['view', 'id' => $model->nama]);
+        return $this->redirect(['index']);
     }
 
     /**

@@ -116,7 +116,7 @@ class DriverController extends Controller
 
             if($model->save()){
                 if (!empty($file))
-                    $file->saveAs( Yii::getAlias('@webroot') .'/uploads/files/'.$model->id.'-'.$model->nama.'.'.$model->files->extension);
+                    $file->saveAs( Yii::getAlias('@root') .'uploads/files/'.$model->id.'-'.$model->nama.'.'.$model->files->extension);
 
                 Yii::$app->session->setFlash('success', 'Berhasil mengupdate data driver dengan nama <strong>' . $model->nama . '</strong>.');
 
@@ -137,15 +137,16 @@ class DriverController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($id)
-    {
-        $model = $this->findModel($id);
-        if(file_exists(Yii::getAlias('@webroot').'/uploads/files/'.$model->id.'-'.$model->nama.'.'.$model->files))
-        unlink(Yii::getAlias('@webroot').'/uploads/files/'.$model->id.'-'.$model->nama.'.'.$model->files);
-        $model->delete();
+     public function actionDelete($id)
+     {
 
-        return $this->redirect(['index']);
-    }
+         $model = $this->findModel($id);
+         if(file_exists(Yii::getAlias('@root').'uploads/files/'.$model->id.'-'.$model->nama.'.'.$model->files))
+         unlink(Yii::getAlias('@root').'uploads/files/'.$model->id.'-'.$model->nama.'.'.$model->files);
+         $model->delete();
+
+         return $this->redirect(['index']);
+     }
 
     // /**
     //  *

@@ -12,10 +12,22 @@ $this->title = 'Data Driver';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="driver-index">
+  <div class="card card-default">
+      <div class="card-body">
+          <h4 class="card-title">
+              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#search-content" aria-expanded="false" aria-controls="search-content">
+                  <i class="fa fa-search"></i> Cari Driver
+              </button>
+          </h4>
+          <div class="clearfix"></div>
+          <div id="search-content" class="collapse mt-20">
+              <hr>
+              <?php echo $this->render('_search', ['model' => $searchModel]) ?>
+          </div>
+      </div>
+  </div>
 
-    <h1><?= Html::encode($this->title) ?></h1>
     <?php Pjax::begin(); ?>
-    <?php echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <div class="table-responsive">
         <?= GridView::widget([
