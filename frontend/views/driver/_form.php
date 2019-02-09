@@ -16,8 +16,8 @@ use kartik\file\FileInput;
       <?php $form = ActiveForm::begin(); ?>
       <div class="col-xs-12 col-sm-6">
         <?= $form->field($model, 'nama')->textInput(['maxlength' => true])->label('Nama Lengkap') ?>
+
         <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
-        <?= $form->field($model, 'usia')->textInput() ?>
 
         <?= $form->field($model, 'no_rek_mandiri')->textInput() ?>
 
@@ -32,9 +32,15 @@ use kartik\file\FileInput;
         <?= $form->field($model, 'no_sim')->textInput(['maxlength' => true]) ?>
 
         <?= $form->field($model, 'no_ktp')->textInput(['maxlength' => true]) ?>
+
+        <?= $form->field($model2, 'nomer')->textInput(['maxlength' => true])->label('Nomer Utama') ?>
+
+        <?= $form->field($model3, 'type')->textInput(['maxlength' => true])->label('Type Hp') ?>
+
+        <?= $form->field($model3, 'merk')->textInput(['maxlength' => true])->label('Merk Hp') ?>
       </div>
       <div class="col-xs-12 col-sm-6">
-
+        <?= $form->field($model, 'usia')->textInput() ?>
 
         <?= $form->field($model, 'pendidikan')->widget(Select2::classname(), [
           'data' => $model->listPendidikan(),
@@ -68,14 +74,8 @@ use kartik\file\FileInput;
 
 
       <!-- <div class="col-xs-12 col-sm-12"> -->
-
       <!-- </div> -->
 
-
-
-      <!-- <div class="form-group">
-          <?php// Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
-      </div> -->
       <?php if (!Yii::$app->request->isAjax) { ?>
           <div class="clearfix">
           <div class="col-xs-12 col-sm-12">

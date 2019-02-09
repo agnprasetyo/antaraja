@@ -7,14 +7,17 @@ use Yii;
 /**
  * This is the model class for table "no_hp".
  *
- * @property int $id_user
+ * @property int $id_driver
  * @property string $nomer
  * @property string $type
  *
- * @property Driver $user
+ * @property Driver $driver
  */
 class NoHp extends \yii\db\ActiveRecord
 {
+    const TYPE_UTAMA = 'Utama';
+    const TYPE_ALTERNATIF = 'Alternatif';
+    
     /**
      * {@inheritdoc}
      */
@@ -29,10 +32,11 @@ class NoHp extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_user', 'nomer', 'type'], 'required'],
-            [['id_user', 'nomer'], 'integer'],
+            ['type', 'default', 'value' => self::TYPE_UTAMA],
+            [['nomer'], 'required'],
+            [['id_driver', 'nomer'], 'integer'],
             [['type'], 'string', 'max' => 30],
-            [['id_user'], 'exist', 'skipOnError' => true, 'targetClass' => Driver::className(), 'targetAttribute' => ['id_user' => 'id']],
+            [['id_driver'], 'exist', 'skipOnError' => true, 'targetClass' => Driver::className(), 'targetAttribute' => ['id_driver' => 'id']],
         ];
     }
 
@@ -42,7 +46,7 @@ class NoHp extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_user' => 'Id User',
+            'id_driver' => 'Id Driver',
             'nomer' => 'Nomer',
             'type' => 'Type',
         ];
@@ -51,8 +55,8 @@ class NoHp extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getUser()
+    public function getDriver()
     {
-        return $this->hasOne(Driver::className(), ['id' => 'id_user']);
+        return $this->hasOne(Driver::className(), ['id' => 'id_driver']);
     }
 }

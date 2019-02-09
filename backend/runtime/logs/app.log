@@ -38505,3 +38505,2756 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1548691530.877
     'REQUEST_TIME' => 1548691530
 ]
+2019-02-02 08:14:35 [::1][1][7s9cc9sqfuprgou5fm4sdjgkfq][error][Error] Error: Class 'dosamigos\highcharts\HighCharts' not found in C:\xampp\htdocs\kuliah\antaraja\backend\views\site\index.php:19
+Stack trace:
+#0 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(backend\controllers\SiteController))
+#3 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#4 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\SiteController.php(63): yii\base\Controller->render('index')
+#5 [internal function]: backend\controllers\SiteController->actionIndex()
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#9 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#10 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-02-02 08:14:35 [::1][1][7s9cc9sqfuprgou5fm4sdjgkfq][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => 'surkk5snfc9cu7dakv37liqjd6'
+    '_csrf-frontend' => 'aa8b23a4d9783aa2702eb38293dac6d87aea5c8438a6df8c5cd9be64100506a2a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"1Yg8L_eWSliICXOnJo5Z4b6J92c_T1Sj\";}'
+    'advanced-backend' => '7s9cc9sqfuprgou5fm4sdjgkfq'
+    '_csrf-backend' => '9164693fbe06c6b1c83baa36be4eb23ec1300bdb9663ebd72cf3a4ef1e8c9391a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"nIWpgqfbqrL8OoS253Oqo5Ao0CGCmjSW\";}'
+    'PHPSESSID' => 'bp6nlp5ei30kr0v53llfsfrbhj'
+    '_csrf' => 'e4069196acd624614a9eebd1de3d4e52c42cf40dce796477da119ddbbdab71e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"x8cYCq5IwaJBoLOj8GHXKWtXpRD82Xip\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/kuliah/antaraja/public/admin/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=surkk5snfc9cu7dakv37liqjd6; _csrf-frontend=aa8b23a4d9783aa2702eb38293dac6d87aea5c8438a6df8c5cd9be64100506a2a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%221Yg8L_eWSliICXOnJo5Z4b6J92c_T1Sj%22%3B%7D; advanced-backend=7s9cc9sqfuprgou5fm4sdjgkfq; _csrf-backend=9164693fbe06c6b1c83baa36be4eb23ec1300bdb9663ebd72cf3a4ef1e8c9391a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22nIWpgqfbqrL8OoS253Oqo5Ao0CGCmjSW%22%3B%7D; PHPSESSID=bp6nlp5ei30kr0v53llfsfrbhj; _csrf=e4069196acd624614a9eebd1de3d4e52c42cf40dce796477da119ddbbdab71e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22x8cYCq5IwaJBoLOj8GHXKWtXpRD82Xip%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '65456'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549091675.426
+    'REQUEST_TIME' => 1549091675
+]
+2019-02-02 08:19:01 [::1][1][7s9cc9sqfuprgou5fm4sdjgkfq][error][Error] Error: Class 'dosamigos\highcharts\HighCharts' not found in C:\xampp\htdocs\kuliah\antaraja\backend\views\site\index.php:19
+Stack trace:
+#0 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(backend\controllers\SiteController))
+#3 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#4 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\SiteController.php(63): yii\base\Controller->render('index')
+#5 [internal function]: backend\controllers\SiteController->actionIndex()
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#9 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#10 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-02-02 08:19:01 [::1][1][7s9cc9sqfuprgou5fm4sdjgkfq][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => 'surkk5snfc9cu7dakv37liqjd6'
+    '_csrf-frontend' => 'aa8b23a4d9783aa2702eb38293dac6d87aea5c8438a6df8c5cd9be64100506a2a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"1Yg8L_eWSliICXOnJo5Z4b6J92c_T1Sj\";}'
+    'advanced-backend' => '7s9cc9sqfuprgou5fm4sdjgkfq'
+    '_csrf-backend' => '9164693fbe06c6b1c83baa36be4eb23ec1300bdb9663ebd72cf3a4ef1e8c9391a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"nIWpgqfbqrL8OoS253Oqo5Ao0CGCmjSW\";}'
+    'PHPSESSID' => 'bp6nlp5ei30kr0v53llfsfrbhj'
+    '_csrf' => 'e4069196acd624614a9eebd1de3d4e52c42cf40dce796477da119ddbbdab71e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"x8cYCq5IwaJBoLOj8GHXKWtXpRD82Xip\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/kuliah/antaraja/public/admin/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=surkk5snfc9cu7dakv37liqjd6; _csrf-frontend=aa8b23a4d9783aa2702eb38293dac6d87aea5c8438a6df8c5cd9be64100506a2a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%221Yg8L_eWSliICXOnJo5Z4b6J92c_T1Sj%22%3B%7D; advanced-backend=7s9cc9sqfuprgou5fm4sdjgkfq; _csrf-backend=9164693fbe06c6b1c83baa36be4eb23ec1300bdb9663ebd72cf3a4ef1e8c9391a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22nIWpgqfbqrL8OoS253Oqo5Ao0CGCmjSW%22%3B%7D; PHPSESSID=bp6nlp5ei30kr0v53llfsfrbhj; _csrf=e4069196acd624614a9eebd1de3d4e52c42cf40dce796477da119ddbbdab71e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22x8cYCq5IwaJBoLOj8GHXKWtXpRD82Xip%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '65528'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549091941.847
+    'REQUEST_TIME' => 1549091941
+]
+2019-02-02 08:21:04 [::1][1][7s9cc9sqfuprgou5fm4sdjgkfq][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: categories in C:\xampp\htdocs\kuliah\antaraja\backend\views\site\index.php:27
+Stack trace:
+#0 C:\xampp\htdocs\kuliah\antaraja\backend\views\site\index.php(27): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 27, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(backend\controllers\SiteController))
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#5 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\SiteController.php(63): yii\base\Controller->render('index')
+#6 [internal function]: backend\controllers\SiteController->actionIndex()
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#10 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#11 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#13 {main}
+2019-02-02 08:21:04 [::1][1][7s9cc9sqfuprgou5fm4sdjgkfq][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => 'surkk5snfc9cu7dakv37liqjd6'
+    '_csrf-frontend' => 'aa8b23a4d9783aa2702eb38293dac6d87aea5c8438a6df8c5cd9be64100506a2a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"1Yg8L_eWSliICXOnJo5Z4b6J92c_T1Sj\";}'
+    'advanced-backend' => '7s9cc9sqfuprgou5fm4sdjgkfq'
+    '_csrf-backend' => '9164693fbe06c6b1c83baa36be4eb23ec1300bdb9663ebd72cf3a4ef1e8c9391a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"nIWpgqfbqrL8OoS253Oqo5Ao0CGCmjSW\";}'
+    'PHPSESSID' => 'bp6nlp5ei30kr0v53llfsfrbhj'
+    '_csrf' => 'e4069196acd624614a9eebd1de3d4e52c42cf40dce796477da119ddbbdab71e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"x8cYCq5IwaJBoLOj8GHXKWtXpRD82Xip\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/kuliah/antaraja/public/admin/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=surkk5snfc9cu7dakv37liqjd6; _csrf-frontend=aa8b23a4d9783aa2702eb38293dac6d87aea5c8438a6df8c5cd9be64100506a2a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%221Yg8L_eWSliICXOnJo5Z4b6J92c_T1Sj%22%3B%7D; advanced-backend=7s9cc9sqfuprgou5fm4sdjgkfq; _csrf-backend=9164693fbe06c6b1c83baa36be4eb23ec1300bdb9663ebd72cf3a4ef1e8c9391a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22nIWpgqfbqrL8OoS253Oqo5Ao0CGCmjSW%22%3B%7D; PHPSESSID=bp6nlp5ei30kr0v53llfsfrbhj; _csrf=e4069196acd624614a9eebd1de3d4e52c42cf40dce796477da119ddbbdab71e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22x8cYCq5IwaJBoLOj8GHXKWtXpRD82Xip%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '49229'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549092064.352
+    'REQUEST_TIME' => 1549092064
+]
+2019-02-02 08:33:38 [::1][1][7s9cc9sqfuprgou5fm4sdjgkfq][error][Error] Error: Class 'backend\controllers\Driver' not found in C:\xampp\htdocs\kuliah\antaraja\backend\controllers\SiteController.php:65
+Stack trace:
+#0 [internal function]: backend\controllers\SiteController->actionIndex()
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#7 {main}
+2019-02-02 08:33:38 [::1][1][7s9cc9sqfuprgou5fm4sdjgkfq][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => 'surkk5snfc9cu7dakv37liqjd6'
+    '_csrf-frontend' => 'aa8b23a4d9783aa2702eb38293dac6d87aea5c8438a6df8c5cd9be64100506a2a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"1Yg8L_eWSliICXOnJo5Z4b6J92c_T1Sj\";}'
+    'advanced-backend' => '7s9cc9sqfuprgou5fm4sdjgkfq'
+    '_csrf-backend' => '9164693fbe06c6b1c83baa36be4eb23ec1300bdb9663ebd72cf3a4ef1e8c9391a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"nIWpgqfbqrL8OoS253Oqo5Ao0CGCmjSW\";}'
+    'PHPSESSID' => 'bp6nlp5ei30kr0v53llfsfrbhj'
+    '_csrf' => 'e4069196acd624614a9eebd1de3d4e52c42cf40dce796477da119ddbbdab71e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"x8cYCq5IwaJBoLOj8GHXKWtXpRD82Xip\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/kuliah/antaraja/public/admin/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=surkk5snfc9cu7dakv37liqjd6; _csrf-frontend=aa8b23a4d9783aa2702eb38293dac6d87aea5c8438a6df8c5cd9be64100506a2a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%221Yg8L_eWSliICXOnJo5Z4b6J92c_T1Sj%22%3B%7D; advanced-backend=7s9cc9sqfuprgou5fm4sdjgkfq; _csrf-backend=9164693fbe06c6b1c83baa36be4eb23ec1300bdb9663ebd72cf3a4ef1e8c9391a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22nIWpgqfbqrL8OoS253Oqo5Ao0CGCmjSW%22%3B%7D; PHPSESSID=bp6nlp5ei30kr0v53llfsfrbhj; _csrf=e4069196acd624614a9eebd1de3d4e52c42cf40dce796477da119ddbbdab71e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22x8cYCq5IwaJBoLOj8GHXKWtXpRD82Xip%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '49275'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549092818.046
+    'REQUEST_TIME' => 1549092818
+]
+2019-02-02 17:53:31 [::1][1][76rc0sjb498i8otc0udobde2ak][error][Error] Error: Class 'backend\controllers\Driver' not found in C:\xampp\htdocs\kuliah\antaraja\backend\controllers\SiteController.php:65
+Stack trace:
+#0 [internal function]: backend\controllers\SiteController->actionIndex()
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#7 {main}
+2019-02-02 17:53:30 [::1][1][76rc0sjb498i8otc0udobde2ak][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => 'sbdbpos70gucv807qlolrm0jnv'
+    '_csrf-frontend' => '0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=sbdbpos70gucv807qlolrm0jnv; _csrf-frontend=0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '49490'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549126410.972
+    'REQUEST_TIME' => 1549126410
+]
+2019-02-02 17:57:34 [::1][1][76rc0sjb498i8otc0udobde2ak][error][Error] Error: Class 'backend\controllers\Driver' not found in C:\xampp\htdocs\kuliah\antaraja\backend\controllers\SiteController.php:65
+Stack trace:
+#0 [internal function]: backend\controllers\SiteController->actionIndex()
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#7 {main}
+2019-02-02 17:57:34 [::1][1][76rc0sjb498i8otc0udobde2ak][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => 'sbdbpos70gucv807qlolrm0jnv'
+    '_csrf-frontend' => '0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy\";}'
+    'advanced-backend' => '76rc0sjb498i8otc0udobde2ak'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=sbdbpos70gucv807qlolrm0jnv; _csrf-frontend=0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy%22%3B%7D; advanced-backend=76rc0sjb498i8otc0udobde2ak'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '49492'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549126654.528
+    'REQUEST_TIME' => 1549126654
+]
+2019-02-02 18:02:11 [::1][1][76rc0sjb498i8otc0udobde2ak][error][Error] Error: Class 'backend\controllers\Driver' not found in C:\xampp\htdocs\kuliah\antaraja\backend\controllers\SiteController.php:65
+Stack trace:
+#0 [internal function]: backend\controllers\SiteController->actionIndex()
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#7 {main}
+2019-02-02 18:02:11 [::1][1][76rc0sjb498i8otc0udobde2ak][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => 'sbdbpos70gucv807qlolrm0jnv'
+    '_csrf-frontend' => '0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy\";}'
+    'advanced-backend' => '76rc0sjb498i8otc0udobde2ak'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=sbdbpos70gucv807qlolrm0jnv; _csrf-frontend=0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy%22%3B%7D; advanced-backend=76rc0sjb498i8otc0udobde2ak'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '49494'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549126931.264
+    'REQUEST_TIME' => 1549126931
+]
+2019-02-02 21:30:30 [::1][1][76rc0sjb498i8otc0udobde2ak][error][Error] Error: Class 'backend\controllers\Driver' not found in C:\xampp\htdocs\kuliah\antaraja\backend\controllers\SiteController.php:65
+Stack trace:
+#0 [internal function]: backend\controllers\SiteController->actionIndex()
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#7 {main}
+2019-02-02 21:30:30 [::1][1][76rc0sjb498i8otc0udobde2ak][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => 'sbdbpos70gucv807qlolrm0jnv'
+    '_csrf-frontend' => '0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy\";}'
+    'advanced-backend' => '76rc0sjb498i8otc0udobde2ak'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=sbdbpos70gucv807qlolrm0jnv; _csrf-frontend=0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy%22%3B%7D; advanced-backend=76rc0sjb498i8otc0udobde2ak'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '49496'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549139430.18
+    'REQUEST_TIME' => 1549139430
+]
+2019-02-02 21:30:44 [::1][1][76rc0sjb498i8otc0udobde2ak][error][Error] Error: Class 'backend\controllers\Driver' not found in C:\xampp\htdocs\kuliah\antaraja\backend\controllers\SiteController.php:65
+Stack trace:
+#0 [internal function]: backend\controllers\SiteController->actionIndex()
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#7 {main}
+2019-02-02 21:30:44 [::1][1][76rc0sjb498i8otc0udobde2ak][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => 'sbdbpos70gucv807qlolrm0jnv'
+    '_csrf-frontend' => '0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy\";}'
+    'advanced-backend' => '76rc0sjb498i8otc0udobde2ak'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=sbdbpos70gucv807qlolrm0jnv; _csrf-frontend=0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy%22%3B%7D; advanced-backend=76rc0sjb498i8otc0udobde2ak'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '49498'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549139444.31
+    'REQUEST_TIME' => 1549139444
+]
+2019-02-03 10:39:51 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(uploads/files/agung.pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'uploads/files/a...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('uploads/files/a...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('25')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-03 10:39:50 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '25'
+]
+
+$_POST = [
+    '_csrf-backend' => '6IRO8RAZdj0iGAohg6qSHeEdawZrgl3Gd2_JUPzbTK-34wLGInssVUpBUFHunON6pkwHdz6yLLANO7xjxZEm6g=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Bekraf Developer Day 2018 - Yogyakarta Certificate.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\php4FE6.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 47093
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => 'sbdbpos70gucv807qlolrm0jnv'
+    '_csrf-frontend' => '0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy\";}'
+    'advanced-backend' => '76rc0sjb498i8otc0udobde2ak'
+    '_csrf-backend' => '6133d8023e6635b510958bd71aaf0b6312b78f2933d878a8ebea030ef47b36d0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_gL72bZhhYZpm6qgGQlqU0qvzTu39JjE\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=25'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------6243920021344'
+    'CONTENT_LENGTH' => '47631'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=sbdbpos70gucv807qlolrm0jnv; _csrf-frontend=0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy%22%3B%7D; advanced-backend=76rc0sjb498i8otc0udobde2ak; _csrf-backend=6133d8023e6635b510958bd71aaf0b6312b78f2933d878a8ebea030ef47b36d0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_gL72bZhhYZpm6qgGQlqU0qvzTu39JjE%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '49940'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=25'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=25'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549186790.952
+    'REQUEST_TIME' => 1549186790
+]
+2019-02-03 10:41:10 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(uploads/files/agung.pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'uploads/files/a...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('uploads/files/a...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('25')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-03 10:41:10 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '25'
+]
+
+$_POST = [
+    '_csrf-backend' => 'o9fipGIKGsBMn3Lieumbbs606kFuOfLgl3VyMsissEP8sK6TUGhAqCTGKJIX3-oJieWGMDsJg5btIQcB8ebaBg=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Proposal KMM.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\php86B2.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 185544
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => 'sbdbpos70gucv807qlolrm0jnv'
+    '_csrf-frontend' => '0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy\";}'
+    'advanced-backend' => '76rc0sjb498i8otc0udobde2ak'
+    '_csrf-backend' => '6133d8023e6635b510958bd71aaf0b6312b78f2933d878a8ebea030ef47b36d0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_gL72bZhhYZpm6qgGQlqU0qvzTu39JjE\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=25'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------23352714716656'
+    'CONTENT_LENGTH' => '186048'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=sbdbpos70gucv807qlolrm0jnv; _csrf-frontend=0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy%22%3B%7D; advanced-backend=76rc0sjb498i8otc0udobde2ak; _csrf-backend=6133d8023e6635b510958bd71aaf0b6312b78f2933d878a8ebea030ef47b36d0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_gL72bZhhYZpm6qgGQlqU0qvzTu39JjE%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '49944'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=25'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=25'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549186870.52
+    'REQUEST_TIME' => 1549186870
+]
+2019-02-03 10:42:49 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(uploads/files/agung.pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'uploads/files/a...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('uploads/files/a...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('25')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-03 10:42:49 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '25'
+]
+
+$_POST = [
+    '_csrf-backend' => 'XYCjKUYtU3hLlvSIa7KbMtD69emMOn0x7eQYx0ES4hoC5-8edE8JECPPrvgGhOpVl6uZmNkKDEeXsG30eFiIXw=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Bekraf Developer Day 2018 - Yogyakarta Certificate.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\phpA36.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 47093
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => 'sbdbpos70gucv807qlolrm0jnv'
+    '_csrf-frontend' => '0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy\";}'
+    'advanced-backend' => '76rc0sjb498i8otc0udobde2ak'
+    '_csrf-backend' => '6133d8023e6635b510958bd71aaf0b6312b78f2933d878a8ebea030ef47b36d0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_gL72bZhhYZpm6qgGQlqU0qvzTu39JjE\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=25'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------30952740932673'
+    'CONTENT_LENGTH' => '47635'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=sbdbpos70gucv807qlolrm0jnv; _csrf-frontend=0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy%22%3B%7D; advanced-backend=76rc0sjb498i8otc0udobde2ak; _csrf-backend=6133d8023e6635b510958bd71aaf0b6312b78f2933d878a8ebea030ef47b36d0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_gL72bZhhYZpm6qgGQlqU0qvzTu39JjE%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '49949'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=25'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=25'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549186969.718
+    'REQUEST_TIME' => 1549186969
+]
+2019-02-03 10:47:22 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(uploads/files/agung.pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'uploads/files/a...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('uploads/files/a...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('25')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-03 10:47:21 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '25'
+]
+
+$_POST = [
+    '_csrf-backend' => 'tay2sPjSZoQUliN52ilgUZM02964bUELzs-uwgnjbXXqy_qHyrA87HzPeQm3HxE21GW3r-1dMH20m9vxMKkHMA=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'PraktikumAnapersis_Data Design_Kelompok 11.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\php3145.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 238658
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => 'sbdbpos70gucv807qlolrm0jnv'
+    '_csrf-frontend' => '0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy\";}'
+    'advanced-backend' => '76rc0sjb498i8otc0udobde2ak'
+    '_csrf-backend' => '6133d8023e6635b510958bd71aaf0b6312b78f2933d878a8ebea030ef47b36d0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_gL72bZhhYZpm6qgGQlqU0qvzTu39JjE\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=25'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------6247189161138'
+    'CONTENT_LENGTH' => '239188'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=sbdbpos70gucv807qlolrm0jnv; _csrf-frontend=0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy%22%3B%7D; advanced-backend=76rc0sjb498i8otc0udobde2ak; _csrf-backend=6133d8023e6635b510958bd71aaf0b6312b78f2933d878a8ebea030ef47b36d0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_gL72bZhhYZpm6qgGQlqU0qvzTu39JjE%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '49982'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=25'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=25'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549187241.856
+    'REQUEST_TIME' => 1549187241
+]
+2019-02-03 10:48:02 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(uploads/files/agung-pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'uploads/files/a...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('uploads/files/a...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('25')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-03 10:48:02 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '25'
+]
+
+$_POST = [
+    '_csrf-backend' => 'AHXAULdSUmKHbPcDuR-mZdtA4xlM5uF6YlEaV_XG4etfEoxnhTAICu81rXPUKdcCnBGPaBnWkAwYBW9kzIyLrg=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Proposal - Pengembangan sistem wetland dengan variasi mendong dan solusi limbah warna kampung batik laweyan sur.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\phpCEED.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 669205
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => 'sbdbpos70gucv807qlolrm0jnv'
+    '_csrf-frontend' => '0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy\";}'
+    'advanced-backend' => '76rc0sjb498i8otc0udobde2ak'
+    '_csrf-backend' => '6133d8023e6635b510958bd71aaf0b6312b78f2933d878a8ebea030ef47b36d0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_gL72bZhhYZpm6qgGQlqU0qvzTu39JjE\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=25'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------246763268118108'
+    'CONTENT_LENGTH' => '669812'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=sbdbpos70gucv807qlolrm0jnv; _csrf-frontend=0a2af1a4b4e6da392891b0f2ff9185e3dc23f9186177ff9926fe9fff371fc5a5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22bnQZrf65VX7WyUv-ifFPhSaLJiCOQwuy%22%3B%7D; advanced-backend=76rc0sjb498i8otc0udobde2ak; _csrf-backend=6133d8023e6635b510958bd71aaf0b6312b78f2933d878a8ebea030ef47b36d0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_gL72bZhhYZpm6qgGQlqU0qvzTu39JjE%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '49988'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=25'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=25'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549187282.226
+    'REQUEST_TIME' => 1549187282
+]
+2019-02-04 02:57:45 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(C:/xampp/htdocs/kuliah/antaraja/public/adminuploads/files/agung-pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'C:/xampp/htdocs...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('C:/xampp/htdocs...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('2')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-04 02:57:45 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '2'
+]
+
+$_POST = [
+    '_csrf-backend' => 'OBBGafPqiTpEWf43HUdJmb_j2b9D8nHoaHYkD6KnFQABRSQQuJzHCwI0lFRIAjuu3pmoiRmFPq9QF1NbxMRkYQ=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Proposal KMM.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\php9CC6.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 185544
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-backend' => '7jfvmk6ngqfameedc5ac9brh81'
+    '_csrf-backend' => '85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa\";}'
+    'advanced-frontend' => '82crf2tvvphp03sk39815g8vmg'
+    '_csrf-frontend' => '3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------30833829125455'
+    'CONTENT_LENGTH' => '186048'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-backend=7jfvmk6ngqfameedc5ac9brh81; _csrf-backend=85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa%22%3B%7D; advanced-frontend=82crf2tvvphp03sk39815g8vmg; _csrf-frontend=3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '50648'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=2'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549245465.357
+    'REQUEST_TIME' => 1549245465
+]
+2019-02-04 02:58:36 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(C:/xampp/htdocs/kuliah/antaraja/public/adminuploads/files/agung-pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'C:/xampp/htdocs...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('C:/xampp/htdocs...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('2')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-04 02:58:36 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '2'
+]
+
+$_POST = [
+    '_csrf-backend' => 'y46U7EKVXfkF1e3tItVfxyggrAuxuCGr6mzHHBcV-oDy2_aVCeMTyEO4h453kC3wSVrdPevPbuzSDbBIcXaL4Q=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Bekraf Developer Day 2018 - Yogyakarta Certificate.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\php6576.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 47093
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-backend' => '7jfvmk6ngqfameedc5ac9brh81'
+    '_csrf-backend' => '85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa\";}'
+    'advanced-frontend' => '82crf2tvvphp03sk39815g8vmg'
+    '_csrf-frontend' => '3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------2327116247048'
+    'CONTENT_LENGTH' => '47631'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-backend=7jfvmk6ngqfameedc5ac9brh81; _csrf-backend=85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa%22%3B%7D; advanced-frontend=82crf2tvvphp03sk39815g8vmg; _csrf-frontend=3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '50665'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=2'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549245516.741
+    'REQUEST_TIME' => 1549245516
+]
+2019-02-04 02:59:05 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(C:/xampp/htdocs/kuliah/antaraja/public/adminuploads/files/agung-pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'C:/xampp/htdocs...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('C:/xampp/htdocs...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('2')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-04 02:59:05 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '2'
+]
+
+$_POST = [
+    '_csrf-backend' => 'U5bZNVZr1BoBlP_8cEAunRsWg0xjQUbuYObQviY7jm9qw7tMHR2aK0f5lZ8lBVyqemzyejk2CalYh6fqQFj_Dg=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => '2711-7425-1-SM.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\phpD4AB.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 513039
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-backend' => '7jfvmk6ngqfameedc5ac9brh81'
+    '_csrf-backend' => '85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa\";}'
+    'advanced-frontend' => '82crf2tvvphp03sk39815g8vmg'
+    '_csrf-frontend' => '3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------120651967121214'
+    'CONTENT_LENGTH' => '513549'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-backend=7jfvmk6ngqfameedc5ac9brh81; _csrf-backend=85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa%22%3B%7D; advanced-frontend=82crf2tvvphp03sk39815g8vmg; _csrf-frontend=3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '50682'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=2'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549245545.205
+    'REQUEST_TIME' => 1549245545
+]
+2019-02-04 02:59:51 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(C:/xampp/htdocs/kuliah/antaraja/public/adminuploads/files/agung-pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'C:/xampp/htdocs...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('C:/xampp/htdocs...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('2')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-04 02:59:51 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '2'
+]
+
+$_POST = [
+    '_csrf-backend' => 'IXGDtZNGwPkHaP6qH7n6s44pZcgFap7ugrbocvoQJrUYJOHM2DCOyEEFlMlK_IiE71MU_l8d0am6158mnHNX1A=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Bekraf Developer Day 2018 - Yogyakarta Certificate.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\php889B.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 47093
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-backend' => '7jfvmk6ngqfameedc5ac9brh81'
+    '_csrf-backend' => '85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa\";}'
+    'advanced-frontend' => '82crf2tvvphp03sk39815g8vmg'
+    '_csrf-frontend' => '3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------1055968927399'
+    'CONTENT_LENGTH' => '47631'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-backend=7jfvmk6ngqfameedc5ac9brh81; _csrf-backend=85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa%22%3B%7D; advanced-frontend=82crf2tvvphp03sk39815g8vmg; _csrf-frontend=3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '50708'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=2'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549245591.268
+    'REQUEST_TIME' => 1549245591
+]
+2019-02-04 03:00:21 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(C:/xampp/htdocs/kuliah/antaraja/public/adminuploads/files/agung-pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'C:/xampp/htdocs...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('C:/xampp/htdocs...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('2')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-04 03:00:21 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '2'
+]
+
+$_POST = [
+    '_csrf-backend' => '6eFV0zA3WhhmQ70E0L0VRQE7pOozTQsWyJHs5gSitijQtDeqe0EUKSAu12eF-GdyYEHV3Gk6RFHw8JuyYsHHSQ=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Proposal KMM.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\phpFDDB.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 185544
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-backend' => '7jfvmk6ngqfameedc5ac9brh81'
+    '_csrf-backend' => '85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa\";}'
+    'advanced-frontend' => '82crf2tvvphp03sk39815g8vmg'
+    '_csrf-frontend' => '3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------12698116030174'
+    'CONTENT_LENGTH' => '186048'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-backend=7jfvmk6ngqfameedc5ac9brh81; _csrf-backend=85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa%22%3B%7D; advanced-frontend=82crf2tvvphp03sk39815g8vmg; _csrf-frontend=3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '50719'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=2'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549245621.287
+    'REQUEST_TIME' => 1549245621
+]
+2019-02-04 03:16:35 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Invalid path alias: @anyname in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\BaseYii.php:154
+Stack trace:
+#0 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\BaseYii::getAlias('@anyname')
+#1 [internal function]: backend\controllers\DriverController->actionFiles('2')
+#2 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-02-04 03:16:35 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '2'
+]
+
+$_POST = [
+    '_csrf-backend' => 'ROR7hp9dAaUQn5Bn62ybzS0wGcq2hL0_4Dodtcg_7fx9sRn_1CtPlFby-gS-Ken6TEpo_Ozz8njYW2rhrlycnQ=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Proposal KMM.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\phpDAAC.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 185544
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-backend' => '7jfvmk6ngqfameedc5ac9brh81'
+    '_csrf-backend' => '85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa\";}'
+    'advanced-frontend' => '82crf2tvvphp03sk39815g8vmg'
+    '_csrf-frontend' => '3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------194392104620961'
+    'CONTENT_LENGTH' => '186052'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-backend=7jfvmk6ngqfameedc5ac9brh81; _csrf-backend=85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa%22%3B%7D; advanced-frontend=82crf2tvvphp03sk39815g8vmg; _csrf-frontend=3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '50910'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=2'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549246595.322
+    'REQUEST_TIME' => 1549246595
+]
+2019-02-04 03:23:26 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(C:/xampp/htdocs/kuliah/antaraja/public/adminuploads/files/agung-pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'C:/xampp/htdocs...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('C:/xampp/htdocs...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('2')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-04 03:23:26 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '2'
+]
+
+$_POST = [
+    '_csrf-backend' => 'Rpg-MUEqzD140xcJ0yaHJpDeHulD9HZhQh5Ae6AOJIB_zVxIClyCDD6-fWqGY_UR8aRv3xmDOSZ6fzcvxm1V4Q=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Bekraf Developer Day 2018 - Yogyakarta Certificate.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\php21AB.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 47093
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-backend' => '7jfvmk6ngqfameedc5ac9brh81'
+    '_csrf-backend' => '85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa\";}'
+    'advanced-frontend' => '82crf2tvvphp03sk39815g8vmg'
+    '_csrf-frontend' => '3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------22411174039239'
+    'CONTENT_LENGTH' => '47635'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-backend=7jfvmk6ngqfameedc5ac9brh81; _csrf-backend=85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa%22%3B%7D; advanced-frontend=82crf2tvvphp03sk39815g8vmg; _csrf-frontend=3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '51096'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=2'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549247006.7
+    'REQUEST_TIME' => 1549247006
+]
+2019-02-04 03:25:47 [::1][-][-][warning][yii\validators\FileValidator::validateValue] File was only partially uploaded: Bekraf Developer Day 2018 - Yogyakarta Certificate.pdf
+    in C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php:187
+2019-02-04 03:25:46 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '2'
+]
+
+$_POST = [
+    '_csrf-backend' => 'Rpg-MUEqzD140xcJ0yaHJpDeHulD9HZhQh5Ae6AOJIB_zVxIClyCDD6-fWqGY_UR8aRv3xmDOSZ6fzcvxm1V4Q=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Bekraf Developer Day 2018 - Yogyakarta Certificate.pdf'
+        ]
+        'type' => [
+            'files' => ''
+        ]
+        'tmp_name' => [
+            'files' => ''
+        ]
+        'error' => [
+            'files' => 3
+        ]
+        'size' => [
+            'files' => 0
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-backend' => '7jfvmk6ngqfameedc5ac9brh81'
+    '_csrf-backend' => '85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa\";}'
+    'advanced-frontend' => '82crf2tvvphp03sk39815g8vmg'
+    '_csrf-frontend' => '3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------22411174039239'
+    'CONTENT_LENGTH' => '493'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-backend=7jfvmk6ngqfameedc5ac9brh81; _csrf-backend=85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa%22%3B%7D; advanced-frontend=82crf2tvvphp03sk39815g8vmg; _csrf-frontend=3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '51100'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=2'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549247146.94
+    'REQUEST_TIME' => 1549247146
+]
+2019-02-04 06:52:44 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(C:/xampp/htdocs/kuliah/antaraja/public/adminuploads/files/paijo-pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'C:/xampp/htdocs...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('C:/xampp/htdocs...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('3')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-04 06:52:44 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '3'
+]
+
+$_POST = [
+    '_csrf-backend' => 'DsCOvZwxnyT7ExLLzRy6QHUuC76KlFTV6sclqrE-nO03lezE10fRFb1-eKiYWch3FFR6iNDjG5LSplL-113tjA=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Proposal KMM.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\phpBFC3.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 185544
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-backend' => '7jfvmk6ngqfameedc5ac9brh81'
+    '_csrf-backend' => '85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa\";}'
+    'advanced-frontend' => '82crf2tvvphp03sk39815g8vmg'
+    '_csrf-frontend' => '3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=3'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------42591696815826'
+    'CONTENT_LENGTH' => '186048'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-backend=7jfvmk6ngqfameedc5ac9brh81; _csrf-backend=85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa%22%3B%7D; advanced-frontend=82crf2tvvphp03sk39815g8vmg; _csrf-frontend=3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '53460'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=3'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=3'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549259564.542
+    'REQUEST_TIME' => 1549259564
+]
+2019-02-04 06:53:43 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(C:/xampp/htdocs/kuliah/antaraja/public/adminuploads/files/paijo-pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'C:/xampp/htdocs...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('C:/xampp/htdocs...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('3')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-04 06:53:43 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '3'
+]
+
+$_POST = [
+    '_csrf-backend' => 'ozhBT9Nf2QC8MvTWPtPgL2CUAKzgUxiB8xzs2YEi5v6abSM2mCmXMfpfnrVrlpIYAe5xmrokV8bLfZuN50GXnw=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Transition + State Diagram.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\phpA4E4.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 126313
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-backend' => '7jfvmk6ngqfameedc5ac9brh81'
+    '_csrf-backend' => '85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa\";}'
+    'advanced-frontend' => '82crf2tvvphp03sk39815g8vmg'
+    '_csrf-frontend' => '3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=3'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------15159201417751'
+    'CONTENT_LENGTH' => '126831'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-backend=7jfvmk6ngqfameedc5ac9brh81; _csrf-backend=85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa%22%3B%7D; advanced-frontend=82crf2tvvphp03sk39815g8vmg; _csrf-frontend=3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '53491'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=3'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=3'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549259623.211
+    'REQUEST_TIME' => 1549259623
+]
+2019-02-04 07:59:58 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Invalid path alias: @root in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\BaseYii.php:154
+Stack trace:
+#0 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(225): yii\BaseYii::getAlias('@root')
+#1 [internal function]: backend\controllers\DriverController->actionDeleteFiles('3')
+#2 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('delete-files', Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/delete-f...', Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-02-04 07:59:58 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/delete-files'
+    'id' => '3'
+]
+
+$_POST = [
+    '_csrf-backend' => 'Pt22vW4dbNPQYEKDcTFZ9YRT2iKIg4kAElIlfPUp_dYHiNTEJWsi4pYNKOAkdCvC5SmrFNL0xkcqM1Iok0qMtw=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-backend' => '7jfvmk6ngqfameedc5ac9brh81'
+    '_csrf-backend' => '85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa\";}'
+    'advanced-frontend' => '82crf2tvvphp03sk39815g8vmg'
+    '_csrf-frontend' => '3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Fview-files&id=3'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '106'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-backend=7jfvmk6ngqfameedc5ac9brh81; _csrf-backend=85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa%22%3B%7D; advanced-frontend=82crf2tvvphp03sk39815g8vmg; _csrf-frontend=3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '54540'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Fdelete-files&id=3'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Fdelete-files&id=3'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549263598.63
+    'REQUEST_TIME' => 1549263598
+]
+2019-02-04 08:10:01 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(admin/uploads/files/agung.pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'admin/uploads/f...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('admin/uploads/f...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('2')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-04 08:10:01 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '2'
+]
+
+$_POST = [
+    '_csrf-backend' => 'tjtjZmZgKX5cbzgFux0jIBWT0JxP7NlRzZu5VVrSekSPbgEfLRZnTxoCUmbuWFEXdOmhqhWblhb1-s4BPLELJQ=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'PraktikumAnapersis_Data Design_Kelompok 11.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\php8037.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 238658
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-backend' => '7jfvmk6ngqfameedc5ac9brh81'
+    '_csrf-backend' => '85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa\";}'
+    'advanced-frontend' => '82crf2tvvphp03sk39815g8vmg'
+    '_csrf-frontend' => '3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------133903015215753'
+    'CONTENT_LENGTH' => '239196'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-backend=7jfvmk6ngqfameedc5ac9brh81; _csrf-backend=85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa%22%3B%7D; advanced-frontend=82crf2tvvphp03sk39815g8vmg; _csrf-frontend=3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '54658'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=2'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549264201.306
+    'REQUEST_TIME' => 1549264201
+]
+2019-02-04 08:10:21 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(admin/uploads/files/agung.pdf): failed to open stream: No such file or directory in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\UploadedFile.php(164): move_uploaded_file('C:\\xampp\\tmp\\ph...', 'admin/uploads/f...')
+#2 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\web\UploadedFile->saveAs('admin/uploads/f...')
+#3 [internal function]: backend\controllers\DriverController->actionFiles('2')
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#7 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#8 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-02-04 08:10:21 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '2'
+]
+
+$_POST = [
+    '_csrf-backend' => 'l_F-Y-9CUJdnU7tAO40ZihjLqO6oxhyKHIPeQrgWA12upBwapDQepiE-0SNuyGu9ebHZ2PKxU80k4qkW3nVyPA=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Transition + State Diagram.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\phpCEA6.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 126313
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-backend' => '7jfvmk6ngqfameedc5ac9brh81'
+    '_csrf-backend' => '85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa\";}'
+    'advanced-frontend' => '82crf2tvvphp03sk39815g8vmg'
+    '_csrf-frontend' => '3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------3110393522136'
+    'CONTENT_LENGTH' => '126827'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-backend=7jfvmk6ngqfameedc5ac9brh81; _csrf-backend=85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa%22%3B%7D; advanced-frontend=82crf2tvvphp03sk39815g8vmg; _csrf-frontend=3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '54662'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=2'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549264221.371
+    'REQUEST_TIME' => 1549264221
+]
+2019-02-04 08:11:01 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Invalid path alias: @root in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\BaseYii.php:154
+Stack trace:
+#0 C:\xampp\htdocs\kuliah\antaraja\backend\controllers\DriverController.php(191): yii\BaseYii::getAlias('@root')
+#1 [internal function]: backend\controllers\DriverController->actionFiles('2')
+#2 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('files', Array)
+#5 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/files', Array)
+#6 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-02-04 08:11:01 [::1][-][-][info][application] $_GET = [
+    'r' => 'driver/files'
+    'id' => '2'
+]
+
+$_POST = [
+    '_csrf-backend' => 'zfz7l0vjzzKhm2xApBqzQzEpQWAXzTHjOjnK3CT4rFr0qZnuAJWBA-f2BiPxX8F0UFMwVk26fqQCWL2IQpvdOw=='
+    'Driver' => [
+        'files' => ''
+    ]
+]
+
+$_FILES = [
+    'Driver' => [
+        'name' => [
+            'files' => 'Bekraf Developer Day 2018 - Yogyakarta Certificate.pdf'
+        ]
+        'type' => [
+            'files' => 'application/pdf'
+        ]
+        'tmp_name' => [
+            'files' => 'C:\\xampp\\tmp\\php6C00.tmp'
+        ]
+        'error' => [
+            'files' => 0
+        ]
+        'size' => [
+            'files' => 47093
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    '_identity' => '4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-backend' => '7jfvmk6ngqfameedc5ac9brh81'
+    '_csrf-backend' => '85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa\";}'
+    'advanced-frontend' => '82crf2tvvphp03sk39815g8vmg'
+    '_csrf-frontend' => '3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------299691920819342'
+    'CONTENT_LENGTH' => '47639'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; _identity=4e93e2cd747c3e33769bc25df2c2e5b7bf8ef02f5d9abd82ed28314af1422aa4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-backend=7jfvmk6ngqfameedc5ac9brh81; _csrf-backend=85f9d06ff1a8958dc9ce836b8a4a534299dfff0cb5ddd09d75e3c52d7770f98da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229UbyKvN1FmjcUEr7azq6ZwOG8awTfcqa%22%3B%7D; advanced-frontend=82crf2tvvphp03sk39815g8vmg; _csrf-frontend=3cbf040ce171ec0528f8506c9f6f9d1fd46224355937ed7ee05c4ff77bb1a4c6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220mjYnd1qcvvO5LwSHwtb-FWl2MrmRwqv%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '54673'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=driver%2Ffiles&id=2'
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/index.php?r=driver%2Ffiles&id=2'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549264261.663
+    'REQUEST_TIME' => 1549264261
+]
+2019-02-09 01:16:05 [::1][-][tbo757enaqctcp8ck4gmsndr6d][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "driver/uploads/files/agung.pdf". in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/uploads/...', Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#2 {main}
+2019-02-09 01:16:05 [::1][-][tbo757enaqctcp8ck4gmsndr6d][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => '2nlhen90nsitd67cf1mtu48fsc'
+    '_csrf-frontend' => 'ce96f8ff57b2af2444f09dbdff3a740eeb3fdbd6229b88e3a88e4a205ad1eb21a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"k-D--A4nTLKpOtIyVJb80ulSbjUt51IF\";}'
+    'advanced-backend' => 'tbo757enaqctcp8ck4gmsndr6d'
+    '_csrf-backend' => '8c6880d22ea46e2fd220fea28e0d5cb32af6894b3074845670530326d8821f26a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cNYL5Y1gKodG3ZsCfbzzir6133bApZdB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/driver/view-files?id=2'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=2nlhen90nsitd67cf1mtu48fsc; _csrf-frontend=ce96f8ff57b2af2444f09dbdff3a740eeb3fdbd6229b88e3a88e4a205ad1eb21a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22k-D--A4nTLKpOtIyVJb80ulSbjUt51IF%22%3B%7D; advanced-backend=tbo757enaqctcp8ck4gmsndr6d; _csrf-backend=8c6880d22ea46e2fd220fea28e0d5cb32af6894b3074845670530326d8821f26a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cNYL5Y1gKodG3ZsCfbzzir6133bApZdB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '54460'
+    'REDIRECT_URL' => '/kuliah/antaraja/public/admin/driver/uploads/files/agung.pdf'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/driver/uploads/files/agung.pdf'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549671365.736
+    'REQUEST_TIME' => 1549671365
+]
+2019-02-09 01:16:29 [::1][-][tbo757enaqctcp8ck4gmsndr6d][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "driver/uploads/files/tito.pdf". in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('driver/uploads/...', Array)
+#1 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\kuliah\antaraja\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\kuliah\antaraja\public\admin\index.php(17): yii\base\Application->run()
+#2 {main}
+2019-02-09 01:16:29 [::1][-][tbo757enaqctcp8ck4gmsndr6d][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => '42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG\",2592000]\";}'
+    'advanced-frontend' => '2nlhen90nsitd67cf1mtu48fsc'
+    '_csrf-frontend' => 'ce96f8ff57b2af2444f09dbdff3a740eeb3fdbd6229b88e3a88e4a205ad1eb21a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"k-D--A4nTLKpOtIyVJb80ulSbjUt51IF\";}'
+    'advanced-backend' => 'tbo757enaqctcp8ck4gmsndr6d'
+    '_csrf-backend' => '8c6880d22ea46e2fd220fea28e0d5cb32af6894b3074845670530326d8821f26a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cNYL5Y1gKodG3ZsCfbzzir6133bApZdB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/kuliah/antaraja/public/admin/driver/view-files?id=6'
+    'HTTP_COOKIE' => '_identity-backend=42ad19085e13390c046b4b97a3969364154647f5d127e81ed55bc75ffc0f216ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22RV-mBWbro_LnUgXaylcFFFZm8TWDwlnG%22%2C2592000%5D%22%3B%7D; advanced-frontend=2nlhen90nsitd67cf1mtu48fsc; _csrf-frontend=ce96f8ff57b2af2444f09dbdff3a740eeb3fdbd6229b88e3a88e4a205ad1eb21a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22k-D--A4nTLKpOtIyVJb80ulSbjUt51IF%22%3B%7D; advanced-backend=tbo757enaqctcp8ck4gmsndr6d; _csrf-backend=8c6880d22ea46e2fd220fea28e0d5cb32af6894b3074845670530326d8821f26a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cNYL5Y1gKodG3ZsCfbzzir6133bApZdB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\Program Files\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\atom\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData|Roaming\\Composer\\vendor\\bin;C:\\Users\\Agung Prasetyo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/kuliah/antaraja/public/admin/index.php'
+    'REMOTE_PORT' => '54466'
+    'REDIRECT_URL' => '/kuliah/antaraja/public/admin/driver/uploads/files/tito.pdf'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kuliah/antaraja/public/admin/driver/uploads/files/tito.pdf'
+    'SCRIPT_NAME' => '/kuliah/antaraja/public/admin/index.php'
+    'PHP_SELF' => '/kuliah/antaraja/public/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1549671389.669
+    'REQUEST_TIME' => 1549671389
+]

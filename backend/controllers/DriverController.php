@@ -179,22 +179,19 @@ class DriverController extends Controller
 
             }
         }
+
         if ($model->load(Yii::$app->request->post())) {
-              $file = \yii\web\UploadedFile::getInstance($model, 'files');
-              if (!empty($file))
-                  $model->files = $file;
+              $files = UploadedFile::getInstance($model, 'files');
 
-              if($model->save())
-              {
+              if (!empty($files))
+                  $model->files = $model->nama.'.'.$files->extension;
 
-                if (!empty($file))
-                  $file->saveAs( Yii::getAlias('@root') .'uploads/files/'. $model->nama .'-'.$model->files->extension);
+              if($model->save()){
+                if (!empty($files))
+                  $files->saveAs(Yii::getAlias('@root').'uploads/files/'.$model->nama.'.'.$files->extension);
 
                 return $this->redirect(['view-files', 'id' => $model->id]);
               }
-              return $this->render('files', ['model' => $model]);
-        } else {
-            return $this->render('files', ['model' => $model]);
         }
         // echo "<pre>";print_r($files);exit();
 
@@ -221,15 +218,18 @@ class DriverController extends Controller
     public function actionDeleteFiles($id)
     {
         $model = $this->findModel($id);
-        if(file_exists(Yii::getAlias('@root') . 'uploads/files/'. $model->files))
-          unlink(Yii::getAlias('@root') . 'uploads/files/'. $model->files);
-        $model->delete();
 
-        Yii::$app->session->setFlash('error', 'Berhasil menghapus berkas verifikasi pendaftar <strong>' . $model->nama . '</strong>.');
+        if(file_exists(Yii::getAlias('@root').'uploads/files/'.$model->files))
+          unlink(Yii::getAlias('@root').'uploads/files/'.$model->files);
 
-        // return $this->redirect(['view', 'id' => $model->nama]);
+        $model->files = null;
+        $model->save();
+
+        Yii::$app->session->setFlash('error', 'Berhasil menghapus berkas pendaftar <strong>' . $model->nama . '</strong>.');
+
         return $this->redirect(['index']);
     }
+
 
     /**
      * Finds the Driver model based on its primary key value.

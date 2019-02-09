@@ -6,6 +6,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use common\models\Driver;
 
 /**
  * Site controller
@@ -53,6 +54,7 @@ class SiteController extends Controller
         ];
     }
 
+
     /**
      * Displays homepage.
      *
@@ -60,7 +62,17 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+      $data = [
+         'Driversr' => (int) Driver::find()->count(),
+      ];
+
+      // echo "<pre>";print_r(array_values($data));exit;
+      $series = [['name' => 'AntarAja', 'data' => array_values($data)]];
+
+       return $this->render('index', [
+         'categories' => array_keys($data),
+         'series'  => $series,
+       ]);
     }
 
     /**

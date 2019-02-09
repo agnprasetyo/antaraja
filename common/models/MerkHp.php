@@ -7,11 +7,11 @@ use Yii;
 /**
  * This is the model class for table "merk_hp".
  *
- * @property int $id_user
+ * @property int $id_driver
  * @property string $merk
  * @property string $type
  *
- * @property Driver $user
+ * @property Driver $driver
  */
 class MerkHp extends \yii\db\ActiveRecord
 {
@@ -29,10 +29,10 @@ class MerkHp extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_user', 'merk', 'type'], 'required'],
-            [['id_user'], 'integer'],
+            [['merk', 'type'], 'required'],
+            [['id_driver'], 'integer'],
             [['merk', 'type'], 'string', 'max' => 20],
-            [['id_user'], 'exist', 'skipOnError' => true, 'targetClass' => Driver::className(), 'targetAttribute' => ['id_user' => 'id']],
+            [['id_driver'], 'exist', 'skipOnError' => true, 'targetClass' => Driver::className(), 'targetAttribute' => ['id_driver' => 'id']],
         ];
     }
 
@@ -42,7 +42,7 @@ class MerkHp extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_user' => 'Id User',
+            'id_driver' => 'Id Driver',
             'merk' => 'Merk',
             'type' => 'Type',
         ];
@@ -51,8 +51,8 @@ class MerkHp extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getUser()
+    public function getDriver()
     {
-        return $this->hasOne(Driver::className(), ['id' => 'id_user']);
+        return $this->hasOne(Driver::className(), ['id' => 'id_driver']);
     }
 }

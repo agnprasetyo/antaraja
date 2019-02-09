@@ -184,4 +184,13 @@ return array (
       '@kartik/file' => $vendorDir . '/kartik-v/yii2-widget-fileinput/src',
     ),
   ),
+  '2amigos/yii2-highcharts-widget' => 
+  array (
+    'name' => '2amigos/yii2-highcharts-widget',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@dosamigos/highcharts' => $vendorDir . '/2amigos/yii2-highcharts-widget/src',
+    ),
+  ),
 );

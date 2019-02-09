@@ -30,7 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php Pjax::begin(); ?>
 
     <div class="table-responsive">
-        <?= GridView::widget([
+        <?=
+        GridView::widget([
             'dataProvider' => $dataProvider,
             // 'filterModel' => $searchModel,
             'columns' => [
@@ -123,7 +124,19 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
                 // ['class' => 'yii\grid\ActionColumn'],
             ],
-        ]); ?>
+        ]);
+        ?>
+
+        <?php if (!Yii::$app->request->isAjax) { ?>
+            <div class="clearfix">
+            <div class="col-xs-12 col-sm-12">
+                <hr>
+                <div class="form-group">
+                    <?php echo Html::a('Kembali', ['site/index'], ['class' => 'btn btn-secondary']) ?>
+                </div>
+            </div>
+            </div>
+        <?php } ?>
     </div>
     <?php Pjax::end(); ?>
 </div>

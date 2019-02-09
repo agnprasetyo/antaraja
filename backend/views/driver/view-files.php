@@ -15,20 +15,20 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="pendaftar-view">
 
     <p>
-        <?= Html::a('Perbarui', ['files', 'id' => $model->nama], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Hapus', ['delete-files', 'id' => $model->nama], [
+        <?= Html::a('Perbarui', ['files', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Hapus', ['delete-files', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
                 'method' => 'post',
             ],
         ]) ?>
-        <?php // Html::a('Download', Yii::$app->homeUrl . $model::URL_FILES . '/' . $model->files, ['class' => 'btn btn-success', 'download' => $model->files]) ?>
+        <?= Html::a('Download', Yii::getAlias('@root').'uploads/files/'.$model->files, ['class' => 'btn btn-success', 'download' => $model->files]) ?>
     </p>
 
     <div class="panel panel-default">
       <div class="panel-body">
-          <embed width="100%" height="720" type="application/pdf" src="<?php echo 'uploads/files/'.$model->files; ?>">
+          <embed width="100%" height="720" type="application/pdf" src="<?php echo Yii::getAlias('@root').'uploads/files/'. $model->files ?>">
       </div>
     </div>
 

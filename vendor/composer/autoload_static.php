@@ -58,6 +58,7 @@ class ComposerStaticInitd4693a8b30260f6aa6244bbb3ed2cb61
         ),
         'd' => 
         array (
+            'dosamigos\\highcharts\\' => 21,
             'dmstr\\' => 6,
         ),
         'c' => 
@@ -212,6 +213,10 @@ class ComposerStaticInitd4693a8b30260f6aa6244bbb3ed2cb61
         'johnitvn\\ajaxcrud\\' => 
         array (
             0 => __DIR__ . '/..' . '/johnitvn/yii2-ajaxcrud/src',
+        ),
+        'dosamigos\\highcharts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/2amigos/yii2-highcharts-widget/src',
         ),
         'dmstr\\' => 
         array (
