@@ -43,6 +43,7 @@ $this->registerJs($js);
 ?>
 
 <div class="driver-index">
+<div class="table-responsive">
 
   <div class="form-group">
 		<div class="input-group">
@@ -53,6 +54,8 @@ $this->registerJs($js);
 	</div>
 	<br>
 
+    <h1><?= Html::encode($this->title) ?></h1>
+
     <?php // Pjax::begin(['id' => 'table-pjax']); ?>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
@@ -60,4 +63,5 @@ $this->registerJs($js);
 
     <?php // Pjax::end(); ?>
 
+</div>
 </div>

@@ -38,9 +38,10 @@ class DriverSearch extends Driver
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
+    public function search($params, $q = null)
     {
-        $query = Driver::find();
+        $query = Driver::find()
+        ->where(['like', 'nama', $q]);
 
         // add conditions that should always apply here
 

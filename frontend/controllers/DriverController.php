@@ -11,6 +11,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
+use yii\web\Response;
+use yii\helpers\Json;
 
 /**
  * DriverController implements the CRUD actions for Driver model.
@@ -36,15 +38,24 @@ class DriverController extends Controller
      * Lists all Driver models.
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex($q = null)
     {
-        $searchModel = new DriverSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+     $searchModel = new DriverSearch();
+     $dataProvider = $searchModel->search(Yii::$app->request->queryParams, $q);
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+     if (Yii::$app->request->isAjax) {
+         Yii::$app->response->format = Response::FORMAT_JSON;
+
+         return $this->renderAjax('index_ajax', [
+             'searchModel' => $searchModel,
+             'dataProvider' => $dataProvider,
+         ]);
+     }
+
+     return $this->render('index', [
+         'searchModel' => $searchModel,
+         'dataProvider' => $dataProvider,
+     ]);
     }
 
     /**
