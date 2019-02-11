@@ -43,8 +43,8 @@ class MerkHp extends \yii\db\ActiveRecord
     {
         return [
             'id_driver' => 'Id Driver',
-            'merk' => 'Merk',
-            'type' => 'Type',
+            'merk' => 'Merk HP',
+            'type' => 'Type HP',
         ];
     }
 

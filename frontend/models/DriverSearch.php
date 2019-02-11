@@ -41,7 +41,9 @@ class DriverSearch extends Driver
     public function search($params, $q = null)
     {
         $query = Driver::find()
-        ->where(['like', 'nama', $q]);
+        ->where(['like', 'no_ktp', $q])
+        ->orWhere(['like', 'no_sim', $q])
+        ->andWhere(['!=', 'berkas', Driver::BERKAS_DELETED]);
 
         // add conditions that should always apply here
 

@@ -1,17 +1,27 @@
 <?php
 namespace frontend\controllers;
 
-use Yii;
-use yii\base\InvalidParamException;
-use yii\web\BadRequestHttpException;
-use yii\web\Controller;
-use yii\filters\VerbFilter;
+// use Yii;
+// use yii\base\InvalidParamException;
+// use yii\web\BadRequestHttpException;
+// use yii\web\Controller;
+// use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 // use common\models\LoginForm;
 // use frontend\models\PasswordResetRequestForm;
 // use frontend\models\ResetPasswordForm;
 // use frontend\models\SignupForm;
-use frontend\models\ContactForm;
+// use frontend\models\ContactForm;
+
+
+use Yii;
+use common\models\Driver;
+use frontend\models\DriverSearch;
+use yii\web\Controller;
+use yii\web\NotFoundHttpException;
+use yii\filters\VerbFilter;
+use yii\web\Response;
+use yii\helpers\Json;
 
 /**
  * Site controller
@@ -70,10 +80,25 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
+     public function actionIndex($q = null)
+     {
+      $searchModel = new DriverSearch();
+      $dataProvider = $searchModel->search(Yii::$app->request->queryParams, $q);
+
+      if (Yii::$app->request->isAjax) {
+          Yii::$app->response->format = Response::FORMAT_JSON;
+
+          return $this->renderAjax('index_ajax', [
+              'searchModel' => $searchModel,
+              'dataProvider' => $dataProvider,
+          ]);
+      }
+
+      return $this->render('index', [
+          'searchModel' => $searchModel,
+          'dataProvider' => $dataProvider,
+      ]);
+     }
 
     /**
      * Logs in a user.
@@ -115,10 +140,10 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionAbout()
-    {
-        return $this->render('about');
-    }
+    // public function actionAbout()
+    // {
+    //     return $this->render('about');
+    // }
 
     /**
      * Signs user up.

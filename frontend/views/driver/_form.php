@@ -14,61 +14,72 @@ use kartik\file\FileInput;
   <div class="row">
 
       <?php $form = ActiveForm::begin(); ?>
+
       <div class="col-xs-12 col-sm-6">
-        <?= $form->field($model, 'nama')->textInput(['maxlength' => true])->label('Nama Lengkap') ?>
+        <?= $form->field($model['Driver'], 'nama')->textInput(['maxlength' => true, 'autocomplete' => 'off']) ?>
 
-        <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model['Driver'], 'email')->textInput(['maxlength' => true, 'autocomplete' => 'off']) ?>
 
-        <?= $form->field($model, 'no_rek_mandiri')->textInput() ?>
+        <?= $form->field($model['Driver'], 'no_rek_mandiri')->textInput(['autocomplete' => 'off']) ?>
 
-        <?= $form->field($model, 'alamat_tinggal')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model['Driver'], 'alamat_ktp')->textInput(['maxlength' => true, 'autocomplete' => 'off']) ?>
 
-        <?= $form->field($model, 'alamat_ktp')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model['Driver'], 'alamat_tinggal')->textInput(['maxlength' => true, 'autocomplete' => 'off']) ?>
 
-        <?= $form->field($model, 'merk_motor')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model['Driver'], 'no_ktp')->textInput(['maxlength' => true, 'autocomplete' => 'off']) ?>
 
-        <?= $form->field($model, 'pekerjaan')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model['Driver'], 'no_sim')->textInput(['maxlength' => true, 'autocomplete' => 'off']) ?>
 
-        <?= $form->field($model, 'no_sim')->textInput(['maxlength' => true]) ?>
 
-        <?= $form->field($model, 'no_ktp')->textInput(['maxlength' => true]) ?>
+    <div class="row">
+        <div class=" col-xs-12 col-sm-6">
+            <?= $form->field($model['Driver'], 'merk_motor')->textInput(['maxlength' => true, 'autocomplete' => 'off']) ?>
+            <?= $form->field($model['NoHp'], 'nomer1')->textInput(['maxlength' => true, 'autocomplete' => 'off']) ?>
+            <?= $form->field($model['MerkHp'], 'merk')->textInput(['maxlength' => true, 'autocomplete' => 'off']) ?>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <?= $form->field($model['Driver'], 'nopol_kendaraan')->textInput(['maxlength' => true, 'autocomplete' => 'off']) ?>
+            <?= $form->field($model['NoHp'], 'nomer2')->textInput(['maxlength' => true, 'autocomplete' => 'off']) ?>
+            <?= $form->field($model['MerkHp'], 'type')->textInput(['maxlength' => true, 'autocomplete' => 'off']) ?>
+        </div>
+    </div>
 
-        <?= $form->field($model2, 'nomer')->textInput(['maxlength' => true])->label('Nomer Utama') ?>
-
-        <?= $form->field($model3, 'type')->textInput(['maxlength' => true])->label('Type Hp') ?>
-
-        <?= $form->field($model3, 'merk')->textInput(['maxlength' => true])->label('Merk Hp') ?>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <?= $form->field($model, 'usia')->textInput() ?>
-
-        <?= $form->field($model, 'pendidikan')->widget(Select2::classname(), [
-          'data' => $model->listPendidikan(),
+     <?= $form->field($model['Driver'], 'ojol')->widget(Select2::classname(), [
+          'data' => $model['Driver']->listOjol(),
           'pluginOptions' => [
-            'placeholder' => ' --- Pilih Pendidikan Terkhir --- ',
+              'placeholder' => ' --- Ikut Ojek Online --- ',
           ],
-          ]) ?>
-          <?= $form->field($model, 'jenis_kelamin')->widget(Select2::classname(), [
-            'data' => $model->listJenisKelamin(),
+      ]) ?>
+
+      </div>
+
+      <div class="col-xs-12 col-sm-6">
+        <?= $form->field($model['Driver'], 'usia')->textInput(['autocomplete' => 'off']) ?>
+
+        <?= $form->field($model['Driver'], 'pekerjaan')->textInput(['maxlength' => true, 'autocomplete' => 'off']) ?>
+
+        <?= $form->field($model['Driver'], 'pendidikan')->widget(Select2::classname(), [
+            'data' => $model['Driver']->listPendidikan(),
+            'pluginOptions' => [
+                'placeholder' => ' --- Pilih Pendidikan Terkhir --- ',
+            ],
+        ]) ?>
+
+        <?= $form->field($model['Driver'], 'jenis_kelamin')->widget(Select2::classname(), [
+            'data' => $model['Driver']->listJenisKelamin(),
             'pluginOptions' => [
               'placeholder' => ' --- Pilih Jenis Kelamin --- ',
             ],
-          ]) ?>
+        ]) ?>
 
-          <?= $form->field($model, 'status')->widget(Select2::classname(), [
-            'data' => $model->listStatus(),
+        <?= $form->field($model['Driver'], 'status')->widget(Select2::classname(), [
+            'data' => $model['Driver']->listStatus(),
             'pluginOptions' => [
               'placeholder' => ' --- Pilih Status --- ',
             ],
-          ]) ?>
-          <?= $form->field($model, 'nopol_kendaraan')->textInput(['maxlength' => true]) ?>
-          <?= $form->field($model, 'ojol')->widget(Select2::classname(), [
-              'data' => $model->listOjol(),
-              'pluginOptions' => [
-                  'placeholder' => ' --- Ikut Ojek Online --- ',
-              ],
-          ]) ?>
-          <?= $form->field($model, 'files')->widget(FileInput::classname())->label('Upload Berkas') ?>
+        ]) ?>
+
+         <?= $form->field($model['Driver'], 'files')->widget(FileInput::classname())->label('Lampiran Berkas (.pdf)') ?>
       </div>
 
 
@@ -78,13 +89,13 @@ use kartik\file\FileInput;
 
       <?php if (!Yii::$app->request->isAjax) { ?>
           <div class="clearfix">
-          <div class="col-xs-12 col-sm-12">
-              <hr>
-              <div class="form-group">
-                  <?php echo Html::a('Kembali', ['site/index'], ['class' => 'btn btn-secondary']) ?>
-                  <?php echo Html::submitButton('Simpan', ['class' => 'btn btn-primary pull-right']) ?>
+              <div class="col-xs-12 col-sm-12">
+                  <hr>
+                  <div class="form-group">
+                      <?php echo Html::a('Kembali', ['site/index'], ['class' => 'btn btn-secondary']) ?>
+                      <?php echo Html::submitButton('Simpan', ['class' => 'btn btn-primary pull-right']) ?>
+                  </div>
               </div>
-          </div>
           </div>
       <?php } ?>
       <?php ActiveForm::end(); ?>

@@ -40,7 +40,8 @@ class DriverSearch extends Driver
      */
     public function search($params)
     {
-        $query = Driver::find();
+        $query = Driver::find()
+        ->where(['!=', 'berkas', Driver::BERKAS_DELETED]);
 
         // add conditions that should always apply here
 

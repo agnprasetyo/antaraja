@@ -17,7 +17,10 @@ class NoHp extends \yii\db\ActiveRecord
 {
     const TYPE_UTAMA = 'Utama';
     const TYPE_ALTERNATIF = 'Alternatif';
-    
+
+    public $nomer1;
+    public $nomer2;
+
     /**
      * {@inheritdoc}
      */
@@ -33,8 +36,9 @@ class NoHp extends \yii\db\ActiveRecord
     {
         return [
             ['type', 'default', 'value' => self::TYPE_UTAMA],
-            [['nomer'], 'required'],
-            [['id_driver', 'nomer'], 'integer'],
+            [['nomer1'], 'required'],
+            [['id_driver', 'nomer1', 'nomer2'], 'integer'],
+            [['nomer1', 'nomer2'], 'string', 'max' => 20],
             [['type'], 'string', 'max' => 30],
             [['id_driver'], 'exist', 'skipOnError' => true, 'targetClass' => Driver::className(), 'targetAttribute' => ['id_driver' => 'id']],
         ];
@@ -47,8 +51,9 @@ class NoHp extends \yii\db\ActiveRecord
     {
         return [
             'id_driver' => 'Id Driver',
-            'nomer' => 'Nomer',
-            'type' => 'Type',
+            'nomer1' => 'Nomor HP Utama',
+            'nomer2' => 'Nomor HP Alternatif',
+            'type' => 'Type HP',
         ];
     }
 

@@ -56,13 +56,6 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="footer" style="background-color: #e3f2fd;">
-    <div class="container">
-        <p class="pull-right">&copy; <?= date('Y') ?> <?= Html::a(Yii::$app->name, ['/']) ?></p>
-
-    </div>
-</footer>
-
 <?php $this->endBody() ?>
 </body>
 </html>

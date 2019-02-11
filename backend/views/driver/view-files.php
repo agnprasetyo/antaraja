@@ -23,12 +23,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-        <?= Html::a('Download', Yii::getAlias('@root').'uploads/files/'.$model->files, ['class' => 'btn btn-success', 'download' => $model->files]) ?>
+        <?= Html::a('Download', '../../uploads/files/'. $model->files, ['class' => 'btn btn-success', 'download' => $model->files]) ?>
+        <?= Html::a('Download error', Yii::getAlias('@admin').'/uploads/files/'.$model->files, ['class' => 'btn btn-success', 'download' => $model->files]) ?>
     </p>
 
     <div class="panel panel-default">
       <div class="panel-body">
-          <embed width="100%" height="720" type="application/pdf" src="<?php echo Yii::getAlias('@root').'uploads/files/'. $model->files ?>">
+          <embed width="100%" height="720" type="application/pdf" src="<?php echo '../../uploads/files/'. $model->files ?>">
       </div>
     </div>
 
