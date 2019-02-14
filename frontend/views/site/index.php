@@ -20,9 +20,9 @@ var qDefault = "$q";
 
 // console.log(content);
 
-$("#search_text").click(function() {
+$("#search").click(function() {
 
-    var q = $("#search_text").val();
+    var q = $("#search").val();
     q = q ? q : qDefault;
 
     if (q) {
@@ -65,8 +65,9 @@ $this->registerJs($js);
 
           <div class="form-group">
               <div class="input-group">
-                  <span class="input-group-addon">Cari</span>
-                  <input type="text" name="q" id="search_text" placeholder="Cek status pendaftaran berdasarkan nomor KTP / nomor SIM" class="form-control">
+                  <!-- <span class="input-group-addon">Cari</span> -->
+                  <input type="text" name="q" placeholder="Cek status pendaftaran berdasarkan nomor KTP / nomor SIM" class="form-control">
+                  <button id="search">OK</button>
               </div>
           </div>
           <br>
@@ -87,7 +88,7 @@ $this->registerJs($js);
           'size' => 'modal-lg',
           ]);
 
-          echo "<div id='modalContent'><div>";
+          echo "<div id='modalContent'></div>";
           Modal::end()
       ?>
   <div class="overlay"></div>
