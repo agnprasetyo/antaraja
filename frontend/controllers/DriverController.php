@@ -123,10 +123,10 @@ class DriverController extends Controller
                         $transaction->commit();
 
                         $files->saveAs( Yii::getAlias('@public') . '/uploads/files/' . $model['Driver']->files);
-                        Yii::$app->session->setFlash('success', 'Berhasil mendaftar sebagai driver dengan nama <strong>' . $model['Driver']->nama . '</strong>.');
+                        Yii::$app->session->setFlash('success', '<div class="container">Berhasil mendaftar sebagai driver dengan nama <strong>' . $model['Driver']->nama . '</strong>.</div>');
 
                         // return $this->redirect(['view', 'id' => $model['Driver']->id]);
-                        return $this->redirect(['site/index']);
+                        return $this->redirect(['../public']);
 
                     } else {
                         $transaction->rollBack();
@@ -142,7 +142,7 @@ class DriverController extends Controller
 
     }
 
-    return $this->render('create', [
+    return $this->renderajax('create', [
        'model' => $model,
     ]);
  }

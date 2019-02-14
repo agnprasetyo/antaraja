@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 use yii\helpers\Url;
+use yii\bootstrap\Modal;
 
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\DriverSearch */
@@ -19,7 +20,7 @@ var qDefault = "$q";
 
 // console.log(content);
 
-$("#search_text").keyup(function() {
+$("#search_text").click(function() {
 
     var q = $("#search_text").val();
     q = q ? q : qDefault;
@@ -39,32 +40,56 @@ JS;
 $this->registerJs($js);
 
 ?>
-<div class="jumbotron">
-    <h1>Selamat Datang !</h1>
-    <p class="lead">Buat kamu mudah, Tanpa ribet</p>
-    <p class="lead">AntarAja Solusinya</p>
 
-    <p>
-        <?php echo Html::a('Daftar Sekarang', ['driver/create'], ['class' => 'btn btn-lg btn-success']) ?>
-    </p>
-    <br>
+<header class="masthead d-flex">
+  <!-- <div class="container text-center my-auto">
+    <h1 class="mb-1">Stylish Portfolio</h1>
+    <h3 class="mb-5">
+      <em>A Free Bootstrap Theme by Start Bootstrap</em>
+    </h3>
+    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+  </div> -->
+<div class="container">
+  <div class="jumbotron">
 
-    <div class="driver-index">
+      <h1>Selamat Datang !</h1>
+      <p class="lead">Buat kamu mudah, Tanpa ribet</p>
+      <p class="lead">AntarAja Solusinya</p>
 
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon">Cari</span>
-                <input type="text" name="q" id="search_text" placeholder="Cek status pendaftaran berdasarkan nomor KTP / nomor SIM" class="form-control" />
-            </div>
-        </div>
-        <br>
+      <p>
+          <?php echo Html::button('Daftar Sekarang', ['value' => Url::to('driver/create'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
+      </p>
+      <br>
 
-        <?php // Pjax::begin(['id' => 'table-pjax']); ?>
-        <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+      <div class="driver-index">
 
-        <div id="result" class="table-responsive"></div>
+          <div class="form-group">
+              <div class="input-group">
+                  <span class="input-group-addon">Cari</span>
+                  <input type="text" name="q" id="search_text" placeholder="Cek status pendaftaran berdasarkan nomor KTP / nomor SIM" class="form-control">
+              </div>
+          </div>
+          <br>
 
-        <?php // Pjax::end(); ?>
+          <?php // Pjax::begin(['id' => 'table-pjax']); ?>
+          <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    </div>
+          <div id="result" class="table-responsive"></div>
+
+          <?php // Pjax::end(); ?>
+
+      </div>
+  </div>
+  <?php
+          Modal::begin([
+          'header' => '<h2 class="text-center">Formulir Pendaftaran Driver Baru</h2>',
+          'id' => 'modal',
+          'size' => 'modal-lg',
+          ]);
+
+          echo "<div id='modalContent'><div>";
+          Modal::end()
+      ?>
+  <div class="overlay"></div>
 </div>
+</header>

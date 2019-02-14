@@ -77,7 +77,7 @@ return [
     // ],
     // [
         // 'class'=>'\kartik\grid\DataColumn',
-        // 'attribute'=>'upload_file',
+        // 'attribute'=>'files',
     // ],
     [
         'class'=>'\kartik\grid\DataColumn',

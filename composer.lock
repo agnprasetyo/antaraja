@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d1910b4f7f002cca4da442472653d582",
+    "content-hash": "066e60ff4fbe85f9ffbc4de1b754ced6",
     "packages": [
         {
             "name": "2amigos/yii2-highcharts-widget",
@@ -4745,7 +4745,8 @@
     "stability-flags": {
         "kartik-v/yii2-widget-select2": 20,
         "kartik-v/yii2-widget-switchinput": 20,
-        "kartik-v/yii2-widget-fileinput": 20
+        "kartik-v/yii2-widget-fileinput": 20,
+        "kartik-v/yii2-editable": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

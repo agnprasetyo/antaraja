@@ -8,7 +8,7 @@ use yii\widgets\DetailView;
 
 $this->title = 'Files ' . $model->nama;
 $this->params['breadcrumbs'][] = ['label' => 'Data Pendaftar', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->nama, 'url' => ['view', 'id' => $model->nama]];
+$this->params['breadcrumbs'][] = ['label' => $model->nama, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
         <?= Html::a('Download', '../../uploads/files/'. $model->files, ['class' => 'btn btn-success', 'download' => $model->files]) ?>
-        <?= Html::a('Download error', Yii::getAlias('@admin').'/uploads/files/'.$model->files, ['class' => 'btn btn-success', 'download' => $model->files]) ?>
+        <?php // echo Html::a('Download error', Yii::getAlias('@admin').'/uploads/files/'.$model->files, ['class' => 'btn btn-success', 'download' => $model->files]) ?>
     </p>
 
     <div class="panel panel-default">

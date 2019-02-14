@@ -7,6 +7,7 @@ use Yii;
 /**
  * This is the model class for table "no_hp".
  *
+ * @property int $id
  * @property int $id_driver
  * @property string $nomer
  * @property string $type
@@ -50,6 +51,7 @@ class NoHp extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
+            'id' => 'ID',
             'id_driver' => 'Id Driver',
             'nomer1' => 'Nomor HP Utama',
             'nomer2' => 'Nomor HP Alternatif',

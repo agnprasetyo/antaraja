@@ -8,7 +8,7 @@
                 <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
             </div>
             <div class="pull-left info">
-                <p>Informatika UNS</p>
+                <p><?= Yii::$app->user->identity->username ?></p>
 
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
@@ -33,34 +33,6 @@
                     ['label' => 'MENU UTAMA', 'options' => ['class' => 'header']],
                     ['label' => 'Home', 'icon' => 'home', 'url' => ['/site']],
                     ['label' => 'Data Driver', 'icon' => 'user', 'url' => ['/driver']],
-                    // ['label' => 'Data Restoran', 'icon' => 'circle-o', 'url' => ['/restoran']],
-                    // ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
-                    // [
-                    //     'label' => 'Some tools',
-                    //     'icon' => 'share',
-                    //     'url' => '#',
-                    //     'items' => [
-                    //         ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii'],],
-                    //         ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug'],],
-                    //         [
-                    //             'label' => 'Level One',
-                    //             'icon' => 'circle-o',
-                    //             'url' => '#',
-                    //             'items' => [
-                    //                 ['label' => 'Level Two', 'icon' => 'circle-o', 'url' => '#',],
-                    //                 [
-                    //                     'label' => 'Level Two',
-                    //                     'icon' => 'circle-o',
-                    //                     'url' => '#',
-                    //                     'items' => [
-                    //                         ['label' => 'Level Three', 'icon' => 'circle-o', 'url' => '#',],
-                    //                         ['label' => 'Level Three', 'icon' => 'circle-o', 'url' => '#',],
-                    //                     ],
-                    //                 ],
-                    //             ],
-                    //         ],
-                    //     ],
-                    // ],
                 ],
             ]
         ) ?>

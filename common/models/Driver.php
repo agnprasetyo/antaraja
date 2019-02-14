@@ -100,7 +100,7 @@ class Driver extends \yii\db\ActiveRecord
             'merk_motor' => 'Merk Kendaraan',
             'pekerjaan' => 'Pekerjaan',
             'nopol_kendaraan' => 'Plat Nomor Kendaraan',
-            'ojol' => 'Ikut Ojek Online ?',
+            'ojol' => 'Ikut Ojek Online',
             'berkas' => 'Berkas',
         ];
     }
@@ -110,7 +110,7 @@ class Driver extends \yii\db\ActiveRecord
      */
     public function getMerkHps()
     {
-        return $this->hasMany(MerkHp::className(), ['id_user' => 'id']);
+        return $this->hasMany(MerkHp::className(), ['id_driver' => 'id']);
     }
 
     /**
@@ -118,7 +118,7 @@ class Driver extends \yii\db\ActiveRecord
      */
     public function getNoHps()
     {
-        return $this->hasMany(NoHp::className(), ['id_user' => 'id']);
+        return $this->hasMany(NoHp::className(), ['id_driver' => 'id']);
     }
 
     /**

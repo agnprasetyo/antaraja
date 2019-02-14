@@ -28,32 +28,32 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar bg-info navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Driver', 'url' => ['/driver']],
-    ];
-    // echo Nav::widget([
-    //     'options' => ['class' => 'navbar-nav navbar-right'],
-    //     'items' => $menuItems,
+    // NavBar::begin([
+    //     'brandLabel' => Yii::$app->name,
+    //     'brandUrl' => Yii::$app->homeUrl,
+    //     'options' => [
+    //         'class' => 'navbar bg-info navbar-fixed-top',
+    //     ],
     // ]);
-    NavBar::end();
+    // $menuItems = [
+    //     ['label' => 'Home', 'url' => ['/site/index']],
+    //     ['label' => 'About', 'url' => ['/site/about']],
+    //     ['label' => 'Driver', 'url' => ['/driver']],
+    // ];
+    // // echo Nav::widget([
+    // //     'options' => ['class' => 'navbar-nav navbar-right'],
+    // //     'items' => $menuItems,
+    // // ]);
+    // NavBar::end();
     ?>
 
-    <div class="container">
+    <!-- <div class="container"> -->
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
-    </div>
+    <!-- </div> -->
 </div>
 
 <?php $this->endBody() ?>

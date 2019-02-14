@@ -12,16 +12,16 @@ body {
     width: 100%;
     background-size: cover;
 } */
-.wrap {
+/* .wrap {
     min-height: 100%;
     height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
-}
+} */
 
-.wrap > .container {
+/* .wrap > .container {
     padding: 70px 15px 20px;
-}
+} */
 
 .footer {
     height: 60px;
@@ -31,13 +31,13 @@ body {
 }
 
 .jumbotron {
-    text-align: center;
+    text-align: left;
     background-color: transparent;
 }
 
 .jumbotron .btn {
     font-size: 21px;
-    padding: 14px 24px;
+    padding: 10px 24px;
 }
 
 .not-set {
@@ -81,9 +81,9 @@ a.desc:after {
     content: "\e156";
 }
 
-.grid-view td {
+/* .grid-view td {
     white-space: nowrap;
-}
+} */
 
 .grid-view .filters input,
 .grid-view .filters select {

@@ -59,7 +59,33 @@ class DriverController extends Controller
      */
     public function actionView($id)
     {
+        // $model = Driver::find()
+        // ->joinWith(['noHp'])
+        // ->where(['noHp.id_driver' => $id]);
+
         $model = $this->findModel($id);
+
+        // if (isset($_POST['hasEditable'])) {
+        //     // use Yii's response format to encode output as JSON
+        //     Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        //
+        //     // read your posted model attributes
+        //     if ($model->load($_POST)) {
+        //         // read or convert your posted information
+        //         $value = $model->nama;
+        //
+        //         $model->save(false);
+        //         // return JSON encoded output in the below format
+        //         return ['output'=>$value, 'message'=>''];
+        //
+        //         // alternatively you can return a validation error
+        //         // return ['output'=>'', 'message'=>'Validation error'];
+        //     }
+        //     // else if nothing to do always return an empty JSON encoded output
+        //     else {
+        //         return ['output'=>'', 'message'=>''];
+        //     }
+        // }
 
         return $this->render('view', [
             'model' => $model,
@@ -82,7 +108,7 @@ class DriverController extends Controller
             $transaction = Yii::$app->db->beginTransaction();
             try {
                 $model['Driver']->tanggal = date('Y-m-d');
-                $model['Driver']->files   = $model['Driver']->nama . '.' . $files->extension;
+                $model['Driver']->files   = $model['Driver']->no_ktp . '.' . $files->extension;
 
                 $flag = $model['Driver']->save();
 
@@ -114,19 +140,19 @@ class DriverController extends Controller
                     $transaction->commit();
 
                     $files->saveAs( Yii::getAlias('@public') . '/uploads/files/' . $model['Driver']->files);
-                    Yii::$app->session->setFlash('success', 'Berhasil mendaftar sebagai driver dengan nama <strong>' . $model['Driver']->nama . '</strong>.');
+                    Yii::$app->session->setFlash('success', 'Berhasil mendaftarkan driver dengan nama <strong>' . $model['Driver']->nama . '</strong>.');
 
                     return $this->redirect(['view', 'id' => $model['Driver']->id]);
 
                 } else {
                     $transaction->rollBack();
 
-                    Yii::$app->session->setFlash('error', 'Gagal  mendaftar sebagai driver <strong>' . $model['Driver']->nama . '</strong>.');
+                    Yii::$app->session->setFlash('error', 'Gagal  mendaftarkan driver <strong>' . $model['Driver']->nama . '</strong>.');
                 }
             } catch (\yii\db\Exception $e) {
              $transaction->rollBack();
 
-             Yii::$app->session->setFlash('error', 'Gagal  mendaftar sebagai driver <strong>' . $model['Driver']->nama . '</strong>.');
+             Yii::$app->session->setFlash('error', 'Gagal  mendaftarkan driver <strong>' . $model['Driver']->nama . '</strong>.');
             }
         }
 
@@ -145,19 +171,22 @@ class DriverController extends Controller
     public function actionUpdate($id)
     {
         $model['Driver'] = $this->findModel($id);
+        // $model['NoHp'] = $this->findModel1($id_driver);
+        // $model['MerkHp'] = MerkHp::find()->indexBy('id_driver')->all();
+
         $model['NoHp'] = new NoHp();
         $model['MerkHp'] = new MerkHp();
 
         if ($model['Driver']->load(Yii::$app->request->post()) && $model['NoHp']->load(Yii::$app->request->post()) && $model['MerkHp']->load(Yii::$app->request->post())) {
             $files = UploadedFile::getInstance($model['Driver'], 'files');
 
-            // if ($model['Driver']->validate() && $model['NoHp']->validate() && $model['MerkHp']->validate()) {
+            if ($model['Driver']->validate() && $model['NoHp']->validate() && $model['MerkHp']->validate()) {
                 $transaction = Yii::$app->db->beginTransaction();
                 try {
                     $model['Driver']->tanggal = date('Y-m-d');
 
                     if (!empty($files))
-                        $model['Driver']->files   = $model['Driver']->nama . '.' . $files->extension;
+                        $model['Driver']->files   = $model['Driver']->no_ktp . '.' . $files->extension;
 
                     $flag = $model['Driver']->save();
 
@@ -191,21 +220,21 @@ class DriverController extends Controller
                         if (!empty($files))
                             $files->saveAs( Yii::getAlias('@public') . '/uploads/files/' . $model['Driver']->files);
 
-                        Yii::$app->session->setFlash('success', 'Berhasil mendaftar sebagai driver dengan nama <strong>' . $model['Driver']->nama . '</strong>.');
+                        Yii::$app->session->setFlash('success', 'Berhasil mendaftarkan driver dengan nama <strong>' . $model['Driver']->nama . '</strong>.');
 
                         return $this->redirect(['view', 'id' => $model['Driver']->id]);
 
                     } else {
                         $transaction->rollBack();
 
-                        Yii::$app->session->setFlash('error', 'Gagal  mendaftar sebagai driver <strong>' . $model['Driver']->nama . '</strong>.');
+                        Yii::$app->session->setFlash('error', 'Gagal  mendaftarkan driver <strong>' . $model['Driver']->nama . '</strong>.');
                     }
                 } catch (\yii\db\Exception $e) {
                  $transaction->rollBack();
 
-                 Yii::$app->session->setFlash('error', 'Gagal  mendaftar sebagai driver <strong>' . $model['Driver']->nama . '</strong>.');
+                 Yii::$app->session->setFlash('error', 'Gagal  mendaftarkan driver <strong>' . $model['Driver']->nama . '</strong>.');
                 }
-        // }
+        }
 
     }
 
@@ -291,14 +320,12 @@ class DriverController extends Controller
         if ($model->load(Yii::$app->request->post())) {
               $files = UploadedFile::getInstance($model, 'files');
 
-              if (!$model->$files){
-                  $model->files = $model->nama.'.'.$files->extension;
-              }
+              if (!empty($files))
+                  $model->files = $model->no_ktp.'.'.$files->extension;
 
-              if($model->save(false)){
-                if (!$model->$files){
-                    $files->saveAs(Yii::getAlias('@public').'/uploads/files/'.$model->files);
-                }
+              if($model->save()){
+                if (!empty($files))
+                  $files->saveAs(Yii::getAlias('@public').'/uploads/files/'.$model->files);
 
                 return $this->redirect(['view-files', 'id' => $model->id]);
               }
@@ -329,9 +356,8 @@ class DriverController extends Controller
     {
         $model = $this->findModel($id);
 
-        if(file_exists(Yii::getAlias('@public').'/uploads/files/'.$model->files)){
-            unlink(Yii::getAlias('@public').'/uploads/files/'.$model->files);
-        }
+        if(file_exists(Yii::getAlias('@public').'/uploads/files/'.$model->files))
+          unlink(Yii::getAlias('@public').'/uploads/files/'.$model->files);
 
         $model->files = null;
         $model->save();
@@ -353,11 +379,23 @@ class DriverController extends Controller
     {
         if (($model = Driver::findOne($id)) !== null) {
           if ($model->berkas !== $model::BERKAS_DELETED) {
-
               return $model;
+
           }
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+    // protected function findModel($id, $id_driver)
+    // {
+    //     if (($model = Driver::findOne(['id' => $id_driver])) !== null) {
+    //       // if ($model->berkas !== $model::BERKAS_DELETED) {
+    //           return $model;
+    //
+    //       // }
+    //     }
+    //
+    //     throw new NotFoundHttpException('The requested page does not exist.');
+    // }
 }

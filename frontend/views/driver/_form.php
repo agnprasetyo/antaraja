@@ -11,6 +11,7 @@ use kartik\file\FileInput;
 ?>
 
 <div class="driver-form">
+<!-- <div class="for"> -->
   <div class="row">
 
       <?php $form = ActiveForm::begin(); ?>
@@ -49,7 +50,7 @@ use kartik\file\FileInput;
           'pluginOptions' => [
               'placeholder' => ' --- Ikut Ojek Online --- ',
           ],
-      ]) ?>
+      ])->label('Ikut Ojek Online ?')  ?>
 
       </div>
 
@@ -87,17 +88,17 @@ use kartik\file\FileInput;
       <!-- <div class="col-xs-12 col-sm-12"> -->
       <!-- </div> -->
 
-      <?php if (!Yii::$app->request->isAjax) { ?>
           <div class="clearfix">
               <div class="col-xs-12 col-sm-12">
                   <hr>
                   <div class="form-group">
-                      <?php echo Html::a('Kembali', ['site/index'], ['class' => 'btn btn-secondary']) ?>
+                      <?php echo Html::a('Cancel', ['../public'], ['class' => 'btn btn-secondary']) ?>
                       <?php echo Html::submitButton('Simpan', ['class' => 'btn btn-primary pull-right']) ?>
                   </div>
               </div>
           </div>
-      <?php } ?>
+
       <?php ActiveForm::end(); ?>
-</div>
+  </div>
+<!-- </div> -->
 </div>

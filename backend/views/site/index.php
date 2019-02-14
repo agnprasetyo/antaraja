@@ -7,12 +7,12 @@ $this->title = 'AntarAja';
 ?>
 <div class="site-index">
 
-    <div class="jumbotron">
+    <!-- <div class="jumbotron">
         <h1>Congratulations!</h1>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
-    </div>
+    </div> -->
 
     <div class="body-content">
       <?=
@@ -21,13 +21,13 @@ $this->title = 'AntarAja';
                'chart'=>[
                   // 'type'=>'bar'
                ],
-               'title' => ['text' => 'Grafik Jumlah Pegawai'],
+               'title' => ['text' => 'Grafik Pendaftar'],
                'xAxis' => [
                   // 'categories' => ['Jumlah'],
                     'categories' => $categories,
                ],
                'yAxis' => [
-                  'title' => ['text' => 'Jumlah Employee']
+                  'title' => ['text' => 'Jumlah Pendaftar']
                ],
                'series' => $series
             ]

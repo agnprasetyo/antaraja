@@ -63,7 +63,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
       $data = [
-         'Driversr' => (int) Driver::find()->count(),
+         'Driver' => (int) Driver::find()->count(),
       ];
 
       // echo "<pre>";print_r(array_values($data));exit;
@@ -74,6 +74,23 @@ class SiteController extends Controller
          'series'  => $series,
        ]);
     }
+
+    // {
+	// 	$sql= Driver::find()
+    //     ->select(['count(*)'])
+    //     ->groupBy('tanggal')
+    //     ->all();
+    //
+    //     // 'SELECT count(id),jenisKelamin FROM profile GROUP BY jenisKelamin';
+    //
+	// 	$dataProvider=new CSqlDataProvider($sql,[
+    //                         'keyField' => 'id',
+	// 	]);
+    //
+	// 	$this->render('index',[
+	// 		'dataProvider'=>$dataProvider,
+	// 	]);
+	// }
 
     /**
      * Login action.

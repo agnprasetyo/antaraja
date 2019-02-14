@@ -6,14 +6,13 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\Driver */
 
-$this->title = '';
-$this->params['breadcrumbs'][] = ['label' => 'Drivers', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Detail Driver : ' . $model->nama;
+$this->params['breadcrumbs'][] = ['label' => 'Driver', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->nama, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = 'Detail';
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="driver-view">
-
-    <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -45,9 +44,34 @@ $this->params['breadcrumbs'][] = $this->title;
             'merk_motor',
             'pekerjaan',
             'nopol_kendaraan',
-            'files',
+            [
+                'attribute'=>'files',
+                'label'=>'Berkas',
+            ],
             'ojol',
-            'berkas',
+            // 'berkas',
+            // [
+            //     'attribute'=>'id',
+            //     'value' => function ($model) {
+            //       return $model['noHp']->nomer1;
+            //     },
+            // ],
+
+            // [
+            //         'attribute' => 'nomer',
+            //         'format' => 'raw',
+            //         'value' => function ($model)
+            //         {
+            //             return Editable::widget([
+            //             'model'=>$model,
+            //             'attribute' => 'id_driver',
+            //             'value' => function ($model) {
+            //               return $model['noHp']->nomer1;
+            //             },
+            //         ]);
+            //
+            //         }
+            // ],
         ],
     ]) ?>
 
