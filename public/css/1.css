@@ -18,12 +18,18 @@ body {
     text-align: left; background: rgb(255,255,255, 0.8);
 }
 
-/* .for {
-    text-align: left;
-    background-color: blue;
-    opacity: 90;
-    padding: 10px 24px;
-} */
+.for {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+.for1 {
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    width: 100%;
+}
 
 .btn-xl {
   padding: 1.25rem 2.5rem;
@@ -126,11 +132,10 @@ h6 {
   background-size: cover;
 }
 
-.form-control {
+/* .form-control {
     padding-top: 1.8rem;
     padding-bottom: 1.8rem;
-
-}
+} */
 
 .masthead h1 {
   font-size: 4rem;

@@ -20,7 +20,7 @@ var qDefault = "$q";
 
 // console.log(content);
 
-$("#search").keyover(function() {
+$("#search").change(function() {
 
     var q = $("#search").val();
     q = q ? q : qDefault;
@@ -42,15 +42,19 @@ $this->registerJs($js);
 ?>
 
 <header class="masthead d-flex">
+    <!-- <img class="for1" src="../public/images/1.png"> -->
 <div class="container">
+    <br><br>
+    <img class="for" src="../public/images/profil.png">
+    <br><br>
   <div class="jumbotron">
 
-      <h1>Selamat Datang !</h1>
-      <p class="lead">Buat kamu mudah, Tanpa ribet</p>
-      <p class="lead">AntarAja Solusinya</p>
+          <!-- <h1>Selamat Datang !</h1>
+          <p class="lead">Buat kamu mudah, Tanpa ribet</p>
+          <p class="lead">AntarAja Solusinya</p> -->
 
       <p>
-          <?php echo Html::button('Daftar Sekarang', ['value' => Url::to('driver/create'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
+          <?php echo Html::button('Daftar Sekarang', ['value' => Url::to('driver/create'),'class' => 'btn btn-primary','id'=>'modalButton']) ?>
       </p>
       <br>
 
