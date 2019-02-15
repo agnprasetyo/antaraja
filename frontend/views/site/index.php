@@ -20,7 +20,7 @@ var qDefault = "$q";
 
 // console.log(content);
 
-$("#search").click(function() {
+$("#search").keyover(function() {
 
     var q = $("#search").val();
     q = q ? q : qDefault;
@@ -42,13 +42,6 @@ $this->registerJs($js);
 ?>
 
 <header class="masthead d-flex">
-  <!-- <div class="container text-center my-auto">
-    <h1 class="mb-1">Stylish Portfolio</h1>
-    <h3 class="mb-5">
-      <em>A Free Bootstrap Theme by Start Bootstrap</em>
-    </h3>
-    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
-  </div> -->
 <div class="container">
   <div class="jumbotron">
 
@@ -65,9 +58,8 @@ $this->registerJs($js);
 
           <div class="form-group">
               <div class="input-group">
-                  <!-- <span class="input-group-addon">Cari</span> -->
-                  <input type="text" name="q" placeholder="Cek status pendaftaran berdasarkan nomor KTP / nomor SIM" class="form-control">
-                  <button id="search">OK</button>
+                  <span class="input-group-addon">Cari</span>
+                  <input type="text" name="q" id="search" placeholder="Cek status pendaftaran berdasarkan nomor KTP / nomor SIM" class="form-control">
               </div>
           </div>
           <br>
