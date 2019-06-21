@@ -20,7 +20,7 @@ var qDefault = "$q";
 
 // console.log(content);
 
-$("#search").change(function() {
+$("#submit").click(function() {
 
     var q = $("#search").val();
     q = q ? q : qDefault;
@@ -36,6 +36,19 @@ $("#search").change(function() {
     }
 });
 
+$("#search").keyup(function() {
+
+  if ($("#search").val()) {
+    result.html( "<div class=\"progress active\">" +
+      "<div class=\"progress-bar progress-bar-info progress-bar-striped\" style=\"width: 100%\">" +
+      "</div>" +
+    "</div>" );
+  } else {
+    result.html("");
+  }
+});
+
+
 JS;
 $this->registerJs($js);
 
@@ -45,7 +58,7 @@ $this->registerJs($js);
     <!-- <img class="for1" src="../public/images/1.png"> -->
 <div class="container">
     <br><br>
-    <img class="for" src="../public/images/profil.png">
+    <img class="for" src="<?php echo Yii::$app->homeUrl ?>images/profil.png">
     <br><br>
   <div class="jumbotron">
 
@@ -62,18 +75,12 @@ $this->registerJs($js);
 
           <div class="form-group">
               <div class="input-group">
-                  <span class="input-group-addon">Cari</span>
-                  <input type="text" name="q" id="search" placeholder="Cek status pendaftaran berdasarkan nomor KTP / nomor SIM" class="form-control">
+                  <input type="text" name="q" id="search" placeholder="Cek status pendaftaran berdasarkan nomor KTP / nomor SIM" class="form-control input-lg">
+                  <span id="submit" class="btn btn-default btn-sm input-group-addon"><i class="fa fa-search"></i> Cari</span>
               </div>
           </div>
           <br>
-
-          <?php // Pjax::begin(['id' => 'table-pjax']); ?>
-          <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
           <div id="result" class="table-responsive"></div>
-
-          <?php // Pjax::end(); ?>
 
       </div>
   </div>

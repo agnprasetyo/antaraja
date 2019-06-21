@@ -82,24 +82,22 @@ class SiteController extends Controller
      */
      public function actionIndex($q = null)
      {
-       if (Yii::$app->request->isAjax) {
-       }
+      $searchModel = new DriverSearch();
+      $dataProvider = $searchModel->search(Yii::$app->request->queryParams, $q);
 
       if (Yii::$app->request->isAjax) {
           Yii::$app->response->format = Response::FORMAT_JSON;
 
-          $model = Driver::find()
-          ->where(['no_ktp' => $q])
-          ->orWhere(['no_sim' => $q])
-          ->andWhere(['!=', 'berkas', Driver::BERKAS_DELETED])
-          ->one();
-
           return $this->renderAjax('index_ajax', [
-              'model' => $model,
+              'searchModel' => $searchModel,
+              'dataProvider' => $dataProvider,
           ]);
       }
 
-      return $this->render('index');
+      return $this->render('index', [
+          'searchModel' => $searchModel,
+          'dataProvider' => $dataProvider,
+      ]);
      }
 
     /**
