@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2019 at 04:17 AM
+-- Generation Time: Jul 04, 2019 at 03:46 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -73,9 +73,7 @@ CREATE TABLE `auth_ref` (
 --
 
 INSERT INTO `auth_ref` (`assign`) VALUES
-('administrator'),
-('pembeli'),
-('penjual');
+('administrator');
 
 -- --------------------------------------------------------
 
@@ -102,26 +100,30 @@ CREATE TABLE `driver` (
   `nopol_kendaraan` varchar(10) NOT NULL,
   `files` varchar(50) DEFAULT NULL,
   `ojol` varchar(32) NOT NULL,
-  `berkas` varchar(32) DEFAULT NULL
+  `flag` varchar(32) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `driver`
 --
 
-INSERT INTO `driver` (`id`, `tanggal`, `nama`, `email`, `no_sim`, `no_ktp`, `pendidikan`, `jenis_kelamin`, `status`, `usia`, `no_rek_mandiri`, `alamat_tinggal`, `alamat_ktp`, `merk_motor`, `pekerjaan`, `nopol_kendaraan`, `files`, `ojol`, `berkas`) VALUES
-(13, '2019-02-14', 'agung', 'agung@gmail.com', 987654321, 12345678, 'SMA', 'LAKI - LAKI', 'BELUM MENIKAH', 21, NULL, 'solo', 'solo', 'vario', 'Mahasiswa', 'AD 1234 BA', NULL, 'TIDAK', 'Pending'),
+INSERT INTO `driver` (`id`, `tanggal`, `nama`, `email`, `no_sim`, `no_ktp`, `pendidikan`, `jenis_kelamin`, `status`, `usia`, `no_rek_mandiri`, `alamat_tinggal`, `alamat_ktp`, `merk_motor`, `pekerjaan`, `nopol_kendaraan`, `files`, `ojol`, `flag`) VALUES
+(13, '2019-02-14', 'agung', 'agung@gmail.com', 21212112, 12345678, 'SMA', 'LAKI - LAKI', 'BELUM MENIKAH', 21, NULL, 'solo', 'solo', 'vario', 'Mahasiswa', 'AD 1234 BA', NULL, 'TIDAK', 'Ditolak'),
 (14, '2019-02-11', 'tito', 'tito@gmail.com', 234443223, 444434222, 'SMA', 'LAKI - LAKI', 'BELUM MENIKAH', 21, NULL, 'jogja', 'jogja', 'vario', 'pedagang', 'ab 1234 nh', '444434222.pdf', 'TIDAK', 'Ditolak'),
 (15, '2019-02-11', 'deni', 'deni@gmail.com', 324234111, 32479848342, 'SMA', 'LAKI - LAKI', 'BELUM MENIKAH', 25, NULL, 'solo', 'solo', 'mio', 'mahasiswa', 'ag 1232 bg', 'deni.pdf', 'TIDAK', 'Dihapus'),
-(16, '2019-02-11', 'ana', 'ana@gmail.com', 334224552, 333442344, 'SMA', 'PEREMPUAN', 'BELUM MENIKAH', 22, NULL, 'sleman', 'sleman', 'mio', 'Mahasiswa', 'ab 1234 we', '333442344.pdf', 'TIDAK', 'Diterima'),
-(17, '2019-02-11', 'hai', 'hai@gmail.com', 2324234344, 23123343455, 'SMA', 'LAKI - LAKI', 'BELUM MENIKAH', 23, NULL, 'solo', 'solo', 'mio', 'mahasiswa', 'ab 1213 fg', '23123343455.pdf', 'TIDAK', 'Ditolak'),
+(16, '2019-02-11', 'ana', 'ana@gmail.com', 334224552, 333442344, 'SMA', 'PEREMPUAN', 'BELUM MENIKAH', 22, NULL, 'sleman', 'sleman', 'mio', 'Mahasiswa', 'ab 1234 we', '333442344.pdf', 'TIDAK', 'Ditolak'),
+(17, '2019-02-11', 'hai', 'hai@gmail.com', 2324234344, 23123343455, 'SMA', 'LAKI - LAKI', 'BELUM MENIKAH', 23, NULL, 'solo', 'solo', 'mio', 'mahasiswa', 'ab 1213 fg', NULL, 'TIDAK', 'Dihapus'),
 (18, '2019-02-14', 'nia', 'nia@gmail.com', 23838444, 23838821, 'SD', 'PEREMPUAN', 'BELUM MENIKAH', 22, NULL, 'sleman', 'sleman', 'mio', 'mahasiswa', 'ab 1239 bn', NULL, 'YA', 'Pending'),
-(19, '2019-02-14', 'dana', 'dana@gmail.com', 2340324031, 3424234230, 'SMP', 'LAKI - LAKI', 'BELUM MENIKAH', 20, NULL, 'solo', 'solo', 'vario', 'pedagang', 'ab 2323 er', NULL, 'TIDAK', 'Diterima'),
+(19, '2019-02-14', 'dana', 'dana@gmail.com', 2340324031, 3424234230, 'SMP', 'LAKI - LAKI', 'BELUM MENIKAH', 20, NULL, 'solo', 'solo', 'vario', 'pedagang', 'ab 2323 er', NULL, 'TIDAK', 'Ditolak'),
 (20, '2019-02-14', 'nana', 'nana@gmail.com', 34234234222, 32423454534, 'SMP', 'PEREMPUAN', 'MENIKAH', 32, NULL, 'solo', 'solo', 'mio', 'ibu rt', 'ab 2132 er', NULL, 'TIDAK', 'Diterima'),
 (21, '2019-02-14', 'ali', 'ali@gmail.com', 123123123, 123213213, 'SMP', 'LAKI - LAKI', 'BELUM MENIKAH', 23, NULL, 'jogja', 'jogja', 'mio', 'pedagang', 'ab 1322 tg', NULL, 'TIDAK', 'Pending'),
-(22, '2019-02-14', 'anton', 'anton@gmail.com', 3424222224442, 23423423434, 'Tidak Sekolah', 'LAKI - LAKI', 'BELUM MENIKAH', 22, NULL, 'jogja', 'jogja', 'vario', 'wiraswasta', 'ab 3242 er', '23423423434.pdf', 'TIDAK', 'Pending'),
+(22, '2019-06-30', 'anto', 'anto@gmail.com', 3424222224442, 23423423434, 'Tidak Sekolah', 'LAKI - LAKI', 'BELUM MENIKAH', 22, NULL, 'jogja', 'jogja', 'vario', 'wiraswasta', 'ab 3242 er', '23423423434.pdf', 'TIDAK', 'Pending'),
 (23, '2019-02-14', 'ani', 'ani@gmail.com', 384832484884, 234324747739, 'SMA', 'PEREMPUAN', 'BELUM MENIKAH', 21, NULL, 'sleman', 'sleman', 'mio', 'mahasiswa', 'ab 2443 fr', NULL, 'TIDAK', 'Dihapus'),
-(24, '2019-02-14', 'a', 'a', 1, 1, 'SD', 'PEREMPUAN', 'BELUM MENIKAH', 1, NULL, 'a', 'a', '1', 'a', '1', '1.pdf', 'TIDAK', 'Dihapus');
+(24, '2019-07-04', 'asd', 'sad', 234, 324, 'SD', 'PEREMPUAN', 'MENIKAH', 3, NULL, 'sdfds', 'esd', 'ewr', 'sf', 'wer', '324.pdf', 'YA', 'Dihapus'),
+(25, '2019-07-04', 'ad', 'ad', 123, 32, 'SD', 'PEREMPUAN', 'BELUM MENIKAH', 12, 324, 'df', 'sdf', 'wqe', 'sd', '32', '32.', 'TIDAK', 'Dihapus'),
+(26, '2019-07-04', 'ad', 'ad', 123213121, 32213123, 'SD', 'PEREMPUAN', 'BELUM MENIKAH', 12, 324, 'df', 'sdf', 'wqe', 'sd', '32', '32213123.', 'TIDAK', 'Dihapus'),
+(27, '2019-07-04', 'qweqwe', 'dsfsd', 133, 12445, 'SD', 'LAKI - LAKI', 'BELUM MENIKAH', 12, NULL, 'werer', 'qweer', 'sada', 'ewrewr', 'sfd', '12445.pdf', 'YA', 'Pending'),
+(28, '2019-07-04', 'aji', 'aji@gmail.com', 1287654, 1235667, 'SD', 'LAKI - LAKI', 'BELUM MENIKAH', 19, NULL, 'solo', 'solo', 'supra x', 'wiraswasta', 'ad 1233 er', '1235667.pdf', 'TIDAK', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -141,7 +143,7 @@ CREATE TABLE `merk_hp` (
 --
 
 INSERT INTO `merk_hp` (`id`, `id_driver`, `merk`, `type`) VALUES
-(1, 13, 'Nokia', 'X2'),
+(1, 13, 'Nokia', ''),
 (2, 14, 'oppo', 'A37'),
 (3, 15, 'A1', 'xiomi'),
 (4, 16, 'Asus', 'M2'),
@@ -151,9 +153,14 @@ INSERT INTO `merk_hp` (`id`, `id_driver`, `merk`, `type`) VALUES
 (8, 19, 'xiaomi', 'mi 4'),
 (9, 20, 'xiaomi', 'mi A1'),
 (10, 21, 'xiaomi', 'MI a2'),
-(11, 22, 'oppo', 'Neo5'),
+(11, 22, 'oppo', ''),
 (12, 23, 'mito', 'M2'),
-(13, 24, '1', '1');
+(14, 22, 'nokia', 'x2'),
+(15, 24, 'wer', 'asd'),
+(16, 25, 'ewr', 'wrw'),
+(17, 26, 'ewr', 'wrw'),
+(18, 27, 'werw', 'wer'),
+(19, 28, 'asus', 'zenfone');
 
 -- --------------------------------------------------------
 
@@ -173,8 +180,8 @@ CREATE TABLE `no_hp` (
 --
 
 INSERT INTO `no_hp` (`id`, `id_driver`, `nomer`, `type`) VALUES
-(1, 13, 87885742400, 'Utama'),
-(2, 13, 8838834432, 'Alternatif'),
+(1, 13, 122121, 'Utama'),
+(2, 13, 12211212, 'Alternatif'),
 (3, 14, 987789990008, 'Utama'),
 (4, 14, 865444677644, 'Alternatif'),
 (5, 15, 873344423473, 'Utama'),
@@ -195,8 +202,17 @@ INSERT INTO `no_hp` (`id`, `id_driver`, `nomer`, `type`) VALUES
 (20, 22, 8563266373, 'Alternatif'),
 (21, 23, 8347748339, 'Utama'),
 (22, 23, 8534324324, 'Alternatif'),
-(23, 24, 1, 'Utama'),
-(24, 24, 1, 'Alternatif');
+(25, 22, 8888888, 'Utama'),
+(26, 24, 23, 'Utama'),
+(27, 24, 32, 'Alternatif'),
+(28, 25, 324, 'Utama'),
+(29, 25, 23, 'Alternatif'),
+(30, 26, 324, 'Utama'),
+(31, 26, 23, 'Alternatif'),
+(32, 27, 34, 'Utama'),
+(33, 27, 123, 'Alternatif'),
+(34, 28, 87625378, 'Utama'),
+(35, 28, 862728999, 'Alternatif');
 
 -- --------------------------------------------------------
 
@@ -324,19 +340,19 @@ ALTER TABLE `auth_assign`
 -- AUTO_INCREMENT for table `driver`
 --
 ALTER TABLE `driver`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `merk_hp`
 --
 ALTER TABLE `merk_hp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `no_hp`
 --
 ALTER TABLE `no_hp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `pendidikan`
