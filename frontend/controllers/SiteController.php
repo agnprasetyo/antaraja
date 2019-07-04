@@ -91,7 +91,7 @@ class SiteController extends Controller
           $model = Driver::find()
           ->where(['no_ktp' => $q])
           ->orWhere(['no_sim' => $q])
-          ->andWhere(['!=', 'berkas', Driver::BERKAS_DELETED])
+          ->andWhere(['!=', 'flag', Driver::FLAG_DELETED])
           ->one();
 
           return $this->renderAjax('index_ajax', [

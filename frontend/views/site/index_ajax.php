@@ -24,7 +24,18 @@ if (!$model) { ?>
   </div>
 
 <div class="jumbotron">
+  Akun dengan nama 
   <?php echo $model->nama; ?>
+  diyatakan 
+  <?php 
+    if ($model->flag == 'Diterima') {
+      echo $model->flag;
+    } elseif ($model->flag == 'Ditolak') {
+      echo $model->flag;
+    } else {
+      echo $model->flag = $model::FLAG_PENDING;
+    }
+  ?>
 </div>
 
 <?php

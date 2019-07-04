@@ -92,25 +92,25 @@ return [
       'filter'    => $searchModel->listBerkas(),
       'value'     => function ($model)
       {
-        switch ($model->berkas) {
-          case $model::BERKAS_DITERIMA:
-          $berkas = '<span class="label label-success">'.$model::BERKAS_DITERIMA.'</span>';
+        switch ($model->flag) {
+          case $model::FLAG_DITERIMA:
+          $flag = '<span class="label label-success">'.$model::FLAG_DITERIMA.'</span>';
           break;
 
-          case $model::BERKAS_DITOLAK:
-          $berkas = '<span class="label label-danger">'.$model::BERKAS_DITOLAK.'</span>';
+          case $model::FLAG_DITOLAK:
+          $flag = '<span class="label label-danger">'.$model::FLAG_DITOLAK.'</span>';
           break;
 
-          case $model::BERKAS_PENDING:
-          $berkas = '<span class="label label-warning">'.$model::BERKAS_PENDING.'</span>';
+          case $model::FLAG_PENDING:
+          $flag = '<span class="label label-warning">'.$model::FLAG_PENDING.'</span>';
           break;
 
           default:
-          $berkas = '<span class="label label-danger">'.$model::BERKAS_DELETED.'</span>';
+          $flag = '<span class="label label-danger">'.$model::FLAG_DELETED.'</span>';
           break;
         }
 
-        return $berkas;
+        return $flag;
       },
     ],
     [
@@ -163,7 +163,7 @@ return [
                     return Html::a('<i class="fa fa-search-plus"></i>',
                         ['view-files', 'id' => $model->id],
                         [
-                            'title' => 'Lihat Berkas',
+                            'title' => 'Lihat flag',
                             'class' => 'btn btn-xs btn-primary',
                         ]
                     );
@@ -172,7 +172,7 @@ return [
                     return Html::a('<i class="fa fa-upload"></i>',
                         ['files', 'id' => $model->id],
                         [
-                            'title' => 'Unggah Berkas',
+                            'title' => 'Unggah flag',
                             'class' => 'btn btn-xs btn-warning',
                         ]
                     );

@@ -63,15 +63,15 @@ class SiteController extends Controller
     public function actionIndex()
     {
       $data = [
-         'Driver' => (int) Driver::find()->count(),
+         'Drivers' => Driver::find()
+         ->orderBy(['tanggal' => SORT_ASC])
+         ->all(),
       ];
 
-      // echo "<pre>";print_r(array_values($data));exit;
-      $series = [['name' => 'AntarAja', 'data' => array_values($data)]];
+      // echo "<pre>";print_r($data['Drivers']);exit;
 
        return $this->render('index', [
-         'categories' => array_keys($data),
-         'series'  => $series,
+         'data' => $data,
        ]);
     }
 

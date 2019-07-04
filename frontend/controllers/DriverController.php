@@ -91,6 +91,7 @@ class DriverController extends Controller
                 $transaction = Yii::$app->db->beginTransaction();
                 try {
                     $model['Driver']->tanggal = date('Y-m-d');
+                    if (!empty($files))
                     $model['Driver']->files   = $model['Driver']->no_ktp . '.' . $files->extension;
 
                     $flag = $model['Driver']->save();
@@ -122,6 +123,7 @@ class DriverController extends Controller
                     if ($flag) {
                         $transaction->commit();
 
+                        if (!empty($files))
                         $files->saveAs( Yii::getAlias('@public') . '/uploads/files/' . $model['Driver']->files);
                         Yii::$app->session->setFlash('success', '<div class="container">Berhasil mendaftar sebagai driver dengan nama <strong>' . $model['Driver']->nama . '</strong>.</div>');
 
@@ -158,7 +160,7 @@ class DriverController extends Controller
     protected function findModel($id)
     {
         if (($model = Driver::findOne($id)) !== null) {
-            if ($model->berkas !== $model::BERKAS_DELETED) {
+            if ($model->flag !== $model::FLAG_DELETED) {
 
                 return $model;
             }

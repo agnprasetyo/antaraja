@@ -18,7 +18,7 @@ class DriverSearch extends Driver
     {
         return [
             [['id', 'no_sim', 'no_ktp', 'usia', 'no_rek_mandiri'], 'integer'],
-            [['tanggal', 'nama', 'email', 'pendidikan', 'jenis_kelamin', 'status', 'alamat_tinggal', 'alamat_ktp', 'merk_motor', 'pekerjaan', 'nopol_kendaraan', 'files', 'ojol', 'berkas'], 'safe'],
+            [['tanggal', 'nama', 'email', 'pendidikan', 'jenis_kelamin', 'status', 'alamat_tinggal', 'alamat_ktp', 'merk_motor', 'pekerjaan', 'nopol_kendaraan', 'files', 'ojol', 'flag'], 'safe'],
         ];
     }
 
@@ -45,7 +45,7 @@ class DriverSearch extends Driver
         // ->orWhere(['like', 'no_sim', $q])
         ->where(['no_ktp' => $q])
         ->orWhere(['no_sim' => $q])
-        ->andWhere(['!=', 'berkas', Driver::BERKAS_DELETED]);
+        ->andWhere(['!=', 'flag', Driver::FLAG_DELETED]);
 
         // add conditions that should always apply here
 
@@ -83,7 +83,7 @@ class DriverSearch extends Driver
             ->andFilterWhere(['like', 'nopol_kendaraan', $this->nopol_kendaraan])
             ->andFilterWhere(['like', 'files', $this->files])
             ->andFilterWhere(['like', 'ojol', $this->ojol])
-            ->andFilterWhere(['like', 'berkas', $this->berkas]);
+            ->andFilterWhere(['like', 'flag', $this->flag]);
 
         return $dataProvider;
     }

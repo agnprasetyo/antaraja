@@ -60,6 +60,7 @@ class ComposerStaticInitd4693a8b30260f6aa6244bbb3ed2cb61
         array (
             'dosamigos\\highcharts\\' => 21,
             'dmstr\\' => 6,
+            'diecoding\\toastr\\' => 17,
         ),
         'c' => 
         array (
@@ -221,6 +222,10 @@ class ComposerStaticInitd4693a8b30260f6aa6244bbb3ed2cb61
         'dmstr\\' => 
         array (
             0 => __DIR__ . '/..' . '/dmstr/yii2-adminlte-asset',
+        ),
+        'diecoding\\toastr\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/diecoding/yii2-toastr/src',
         ),
         'cebe\\markdown\\' => 
         array (

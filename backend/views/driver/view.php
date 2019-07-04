@@ -46,33 +46,27 @@ $this->params['breadcrumbs'][] = 'Detail';
             'nopol_kendaraan',
             [
                 'attribute'=>'files',
-                'label'=>'Berkas',
+                'label'=>'File',
             ],
             'ojol',
-            // 'berkas',
-            // [
-            //     'attribute'=>'id',
-            //     'value' => function ($model) {
-            //       return $model['noHp']->nomer1;
-            //     },
-            // ],
-
-            // [
-            //         'attribute' => 'nomer',
-            //         'format' => 'raw',
-            //         'value' => function ($model)
-            //         {
-            //             return Editable::widget([
-            //             'model'=>$model,
-            //             'attribute' => 'id_driver',
-            //             'value' => function ($model) {
-            //               return $model['noHp']->nomer1;
-            //             },
-            //         ]);
-            //
-            //         }
-            // ],
+            [
+                'label'=>'Nomor HP Utama',
+                'format'=>'raw',
+                'value'=>function($model)
+                {
+                    return $model['noHps'][0]->nomer;
+                }
+            ],
+            [
+                'label'=>'Nomor HP Alternatif',
+                'format'=>'raw',
+                'value'=>function($model)
+                {
+                    return $model['noHps'][1]->nomer;
+                }
+            ],
         ],
+        // 'template' = '<tr><th{captionOptions}>{label}</th><td{contentOptions}>{value}</td></tr>';
     ]) ?>
 
 </div>

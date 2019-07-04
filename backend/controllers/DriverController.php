@@ -7,6 +7,7 @@ use common\models\Driver;
 use common\models\NoHp;
 use common\models\MerkHp;
 use backend\models\DriverSearch;
+use backend\models\DriverForm;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -59,33 +60,7 @@ class DriverController extends Controller
      */
     public function actionView($id)
     {
-        // $model = Driver::find()
-        // ->joinWith(['noHp'])
-        // ->where(['noHp.id_driver' => $id]);
-
         $model = $this->findModel($id);
-
-        // if (isset($_POST['hasEditable'])) {
-        //     // use Yii's response format to encode output as JSON
-        //     Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-        //
-        //     // read your posted model attributes
-        //     if ($model->load($_POST)) {
-        //         // read or convert your posted information
-        //         $value = $model->nama;
-        //
-        //         $model->save(false);
-        //         // return JSON encoded output in the below format
-        //         return ['output'=>$value, 'message'=>''];
-        //
-        //         // alternatively you can return a validation error
-        //         // return ['output'=>'', 'message'=>'Validation error'];
-        //     }
-        //     // else if nothing to do always return an empty JSON encoded output
-        //     else {
-        //         return ['output'=>'', 'message'=>''];
-        //     }
-        // }
 
         return $this->render('view', [
             'model' => $model,
@@ -170,76 +145,55 @@ class DriverController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model['Driver'] = $this->findModel($id);
-        // $model['NoHp'] = $this->findModel1($id_driver);
-        // $model['MerkHp'] = MerkHp::find()->indexBy('id_driver')->all();
-
-        $model['NoHp'] = new NoHp();
-        $model['MerkHp'] = new MerkHp();
-
-        if ($model['Driver']->load(Yii::$app->request->post()) && $model['NoHp']->load(Yii::$app->request->post()) && $model['MerkHp']->load(Yii::$app->request->post())) {
-            $files = UploadedFile::getInstance($model['Driver'], 'files');
-
-            if ($model['Driver']->validate() && $model['NoHp']->validate() && $model['MerkHp']->validate()) {
-                $transaction = Yii::$app->db->beginTransaction();
-                try {
-                    $model['Driver']->tanggal = date('Y-m-d');
-
-                    if (!empty($files))
-                        $model['Driver']->files   = $model['Driver']->no_ktp . '.' . $files->extension;
-
-                    $flag = $model['Driver']->save();
-
-                    if ($flag) {
-                        $model['MerkHp']->id_driver = $model['Driver']->id;
-
-                        $flag = $model['MerkHp']->save();
-
-                        if ($flag) {
-                            $nomer2 = $model['NoHp']->nomer2;
-
-                            $model['NoHp']->id_driver = $model['Driver']->id;
-                            $model['NoHp']->nomer = $model['NoHp']->nomer1;
-
-                            $flag = $model['NoHp']->save();
-
-                            if ($nomer2 && $flag) {
-                                $modelNoHp = new NoHp();
-                                $modelNoHp->id_driver = $model['Driver']->id;
-                                $modelNoHp->nomer     = $nomer2;
-                                $modelNoHp->type      = $modelNoHp::TYPE_ALTERNATIF;
-
-                                $flag = $modelNoHp->save(false);
-                            }
-                        }
-                    }
-
-                    if ($flag) {
-                        $transaction->commit();
-
-                        if (!empty($files))
-                            $files->saveAs( Yii::getAlias('@public') . '/uploads/files/' . $model['Driver']->files);
-
-                        Yii::$app->session->setFlash('success', 'Berhasil mendaftarkan driver dengan nama <strong>' . $model['Driver']->nama . '</strong>.');
-
-                        return $this->redirect(['view', 'id' => $model['Driver']->id]);
-
-                    } else {
-                        $transaction->rollBack();
-
-                        Yii::$app->session->setFlash('error', 'Gagal  mendaftarkan driver <strong>' . $model['Driver']->nama . '</strong>.');
-                    }
-                } catch (\yii\db\Exception $e) {
-                 $transaction->rollBack();
-
-                 Yii::$app->session->setFlash('error', 'Gagal  mendaftarkan driver <strong>' . $model['Driver']->nama . '</strong>.');
-                }
+        if (($modelDefault = Driver::findOne($id)) !== null) {
+            if ($modelDefault->flag == $modelDefault::FLAG_DELETED) {
+                throw new NotFoundHttpException('The requested page does not exist.');
+            }
         }
 
-    }
+        $model = new DriverForm();
+        
+        if ($model->load(Yii::$app->request->post())) {
+            $model->_files = UploadedFile::getInstance($model, '_files');
+
+            $flag = $model->updateRecord($id);
+
+            if ($flag == 3) {
+                Yii::$app->session->setFlash('success', 'Berhasil.');
+
+                return $this->redirect(['view', 'id' => $modelDefault->id]);
+
+            } else if ($flag == 2) {
+                Yii::$app->session->setFlash('error', 'Gagal Merk.');
+            } else if ($flag == 1) {
+                Yii::$app->session->setFlash('error', 'Gagal No Hp.');
+            }
+        }
+
+        $model->_nama = $modelDefault->nama;
+        $model->_email = $modelDefault->email;
+        $model->_no_rek_mandiri = $modelDefault->no_rek_mandiri;
+        $model->_alamat_ktp = $modelDefault->alamat_ktp;
+        $model->_alamat_tinggal = $modelDefault->alamat_tinggal;
+        $model->_no_ktp = $modelDefault->no_ktp;
+        $model->_no_sim = $modelDefault->no_sim;
+        $model->_merk_motor = $modelDefault->merk_motor;
+        $model->_nomer1 = $modelDefault['noHps'][0]->nomer;
+        $model->_merk = $modelDefault['merkHps'][0]->merk;
+        $model->_nopol_kendaraan = $modelDefault->nopol_kendaraan;
+        $model->_nomer2 = $modelDefault['noHps'][1]->nomer;
+        $model->_type = $modelDefault['merkHps'][0]->type;
+        $model->_ojol = $modelDefault->ojol;
+        $model->_usia = $modelDefault->usia;
+        $model->_pekerjaan = $modelDefault->pekerjaan;
+        $model->_pendidikan = $modelDefault->pendidikan;
+        $model->_jenis_kelamin = $modelDefault->jenis_kelamin;
+        $model->_status = $modelDefault->status;
+        // $model->_files = $modelDefault->files;
 
         return $this->render('update', [
             'model' => $model,
+            'modelDefault' => $modelDefault
         ]);
     }
 
@@ -255,7 +209,7 @@ class DriverController extends Controller
         // $this->findModel($id)->delete();
 
         $model = $this->findModel($id);
-        $model->berkas = $model::BERKAS_DELETED;
+        $model->flag = $model::FLAG_DELETED;
         $model->save(false);
 
         Yii::$app->session->setFlash('success', 'Berhasil menghapus pendaftar <strong>' . $model->nama . '</strong>.');
@@ -269,7 +223,7 @@ class DriverController extends Controller
     public function actionTerima($id)
     {
         $model = $this->findModel($id);
-        $model->berkas = $model::BERKAS_DITERIMA;
+        $model->flag = $model::FLAG_DITERIMA;
         $model->save(false);
 
         Yii::$app->session->setFlash('success', 'Berhasil menerima pendaftar <strong>' . $model->nama . '</strong>.');
@@ -283,7 +237,7 @@ class DriverController extends Controller
     public function actionTolak($id)
     {
         $model = $this->findModel($id);
-        $model->berkas = $model::BERKAS_DITOLAK;
+        $model->flag = $model::FLAG_DITOLAK;
         $model->save(false);
 
         Yii::$app->session->setFlash('success', 'Berhasil menolak pendaftar <strong>' . $model->nama . '</strong>.');
@@ -297,7 +251,7 @@ class DriverController extends Controller
     public function actionPending($id)
     {
         $model = $this->findModel($id);
-        $model->berkas = $model::BERKAS_PENDING;
+        $model->berkas = $model::FLAG_PENDING;
         $model->save(false);
 
         Yii::$app->session->setFlash('success', 'Berhasil mengubah pendaftar <strong>' . $model->nama . '</strong>.');
@@ -311,7 +265,7 @@ class DriverController extends Controller
     public function actionFiles($id)
     {
         if (($model = Driver::findOne($id)) !== null) {
-            if ($model->berkas == $model::BERKAS_DELETED) {
+            if ($model->flag == $model::FLAG_DELETED) {
                 throw new NotFoundHttpException('The requested page does not exist.');
 
             }
@@ -343,6 +297,13 @@ class DriverController extends Controller
     public function actionViewFiles($id)
     {
         $model = $this->findModel($id);
+
+        
+        // $model->_nomer1 = $modelDefault['noHps'][0]->nomer;
+        // $model->_merk = $modelDefault['merkHps'][0]->merk;
+        // $model->_nopol_kendaraan = $modelDefault->nopol_kendaraan;
+        // $model->_nomer2 = $modelDefault['noHps'][1]->nomer;
+        // $model->_type = $modelDefault['merkHps'][0]->type;
 
         return $this->render('view-files', [
             'model' => $model,
@@ -378,7 +339,7 @@ class DriverController extends Controller
     protected function findModel($id)
     {
         if (($model = Driver::findOne($id)) !== null) {
-          if ($model->berkas !== $model::BERKAS_DELETED) {
+          if ($model->flag !== $model::FLAG_DELETED) {
               return $model;
 
           }
@@ -386,16 +347,4 @@ class DriverController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
-
-    // protected function findModel($id, $id_driver)
-    // {
-    //     if (($model = Driver::findOne(['id' => $id_driver])) !== null) {
-    //       // if ($model->berkas !== $model::BERKAS_DELETED) {
-    //           return $model;
-    //
-    //       // }
-    //     }
-    //
-    //     throw new NotFoundHttpException('The requested page does not exist.');
-    // }
 }

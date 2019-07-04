@@ -24,7 +24,7 @@ use Yii;
  * @property string $pekerjaan
  * @property string $nopol_kendaraan
  * @property string $ojol
- * @property string $berkas
+ * @property string $flag
  *
  * @property MerkHp[] $merkHps
  * @property NoHp[] $noHps
@@ -46,10 +46,10 @@ class Driver extends \yii\db\ActiveRecord
     const OJOL_YA = 'YA';
     const OJOL_TIDAK = 'TIDAK';
 
-    const BERKAS_PENDING  = 'Pending';
-    const BERKAS_DITERIMA = 'Diterima';
-    const BERKAS_DITOLAK  = 'Ditolak';
-    const BERKAS_DELETED  = 'Dihapus';
+    const FLAG_PENDING  = 'Pending';
+    const FLAG_DITERIMA = 'Diterima';
+    const FLAG_DITOLAK  = 'Ditolak';
+    const FLAG_DELETED  = 'Dihapus';
 
     /**
      * {@inheritdoc}
@@ -65,7 +65,7 @@ class Driver extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            ['berkas', 'default', 'value' => self::BERKAS_PENDING],
+            ['flag', 'default', 'value' => self::FLAG_PENDING],
             [['nama', 'email', 'no_sim', 'no_ktp', 'pendidikan', 'jenis_kelamin', 'status', 'usia', 'alamat_tinggal', 'alamat_ktp', 'merk_motor', 'pekerjaan', 'nopol_kendaraan', 'ojol'], 'required'],
             [['no_sim', 'no_ktp', 'usia', 'no_rek_mandiri'], 'integer'],
             [['no_sim', 'no_ktp'], 'unique'],
@@ -101,7 +101,7 @@ class Driver extends \yii\db\ActiveRecord
             'pekerjaan' => 'Pekerjaan',
             'nopol_kendaraan' => 'Plat Nomor Kendaraan',
             'ojol' => 'Ikut Ojek Online',
-            'berkas' => 'Berkas',
+            'flag' => 'Flag',
         ];
     }
 
@@ -126,13 +126,13 @@ class Driver extends \yii\db\ActiveRecord
      */
     public function listBerkas()
     {
-        $berkas = [
-            self::BERKAS_PENDING  => self::BERKAS_PENDING,
-            self::BERKAS_DITERIMA => self::BERKAS_DITERIMA,
-            self::BERKAS_DITOLAK  => self::BERKAS_DITOLAK,
+        $flag = [
+            self::FLAG_PENDING  => self::FLAG_PENDING,
+            self::FLAG_DITERIMA => self::FLAG_DITERIMA,
+            self::FLAG_DITOLAK  => self::FLAG_DITOLAK,
         ];
 
-        return $berkas;
+        return $flag;
     }
 
     /**
@@ -197,7 +197,7 @@ class Driver extends \yii\db\ActiveRecord
     {
         $model = static::findOne($id);
 
-        return $model ? $model->berkas == self::BERKAS_DITERIMA : false;
+        return $model ? $model->flag == self::FLAG_DITERIMA : false;
     }
 
     /**
@@ -207,7 +207,7 @@ class Driver extends \yii\db\ActiveRecord
     {
         $model = static::findOne($id);
 
-        return $model ? $model->berkas == self::BERKAS_DITOLAK : false;
+        return $model ? $model->flag == self::FLAG_DITOLAK : false;
     }
 
     /**
